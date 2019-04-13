@@ -1,4 +1,4 @@
-package br.usjt.web.extra.dao;
+package br.usjt.projetoWeb.DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
