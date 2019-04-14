@@ -64,7 +64,7 @@ public class UsuarioDAO {
 
 	public void excluir(String email) {
 		try {
-			String sql = "DELETE * FROM usuario WHERE email=?";
+			String sql = "DELETE FROM usuario WHERE email=?";
 
 			PreparedStatement ps = this.conexao.prepareStatement(sql);
 
