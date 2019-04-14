@@ -63,7 +63,7 @@ public class ComentarioDAO {
 
 	public void excluir(int id) {
 		try {
-			String sql = "DELETE * FROM comentario WHERE id=?";
+			String sql = "DELETE FROM comentario WHERE id=?";
 
 			PreparedStatement ps = this.conexao.prepareStatement(sql);
 
