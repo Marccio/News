@@ -9,13 +9,13 @@ import br.usjt.projetoWeb.model.Usuario;
 public class UsuarioDAO {
 	Connection conexao;
 
-	public void cadastrar(Usuario usuario) {
+	public int cadastrar(Usuario usuario) {
 		try {
 			this.conexao = ConnectionFactory.conectar();
 
 			String sql = "INSERT INTO usuario (email,nome, senha, perfil) VALUES (?,?,?,?)";
 
-			PreparedStatement ps = this.conexao.prepareStatement(sql);
+			PreparedStatement ps = this.conexao.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
 
 			ps.setString(1, usuario.getEmail());
 			ps.setString(2, usuario.getNome());
@@ -23,10 +23,16 @@ public class UsuarioDAO {
 			ps.setString(4, usuario.getPerfil());
 
 			ps.execute();
-			ps.close();
+			
+			ResultSet rs = ps.getGeneratedKeys();
+			if(rs.next()) {
+				int idGerado = rs.getInt(1);
+				return idGerado;
+			}
 		} catch (SQLException ex) {
 			ex.printStackTrace();
 		}
+		return -1;
 	}
 
 	public Usuario consultar(String email) {
