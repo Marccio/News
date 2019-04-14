@@ -61,7 +61,7 @@ public class NoticiaDAO {
 
 	public void excluir(int id) {
 		try {
-			String sql = "DELETE * FROM noticia WHERE id=?";
+			String sql = "DELETE FROM noticia WHERE id=?";
 			PreparedStatement ps = this.conexao.prepareStatement(sql);
 
 			ps.setInt(1, id);
