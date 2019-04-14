@@ -11,8 +11,8 @@ public class UsuarioService {
 		this.usuarioDAO = new UsuarioDAO();
 	}
 	
-	public void cadastrar(Usuario usuario) {
-		this.usuarioDAO.cadastrar(usuario);
+	public int cadastrar(Usuario usuario) {
+		return this.usuarioDAO.cadastrar(usuario);
 	}
 	
 	public Usuario consultar(String email) {
