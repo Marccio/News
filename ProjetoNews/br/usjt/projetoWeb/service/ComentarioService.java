@@ -11,12 +11,12 @@ public class ComentarioService {
 		this.comentarioDAO = new ComentarioDAO();
 	}
 	
-	public void cadastrar(Comentario comentario) {
-		this.comentarioDAO.cadastrar(comentario);
+	public int cadastrar(Comentario comentario) {
+		return this.comentarioDAO.cadastrar(comentario);
 	}
 	
-	public void consultar(int id) {
-		this.comentarioDAO.consultar(id);
+	public Comentario consultar(int id) {
+		return this.comentarioDAO.consultar(id);
 	}
 	
 	public void excluir(int id) {
