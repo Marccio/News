@@ -10,23 +10,29 @@ public class NoticiaDAO {
 
 	Connection conexao;
 
-	public void cadastrar(Noticia noticia) {
+	public int cadastrar(Noticia noticia) {
 		try {
 			this.conexao = ConnectionFactory.conectar();
 
 			String sql = "INSERT INTO noticia (titulo, resumo, texto) VALUES (?,?,?)";
 
-			PreparedStatement ps = this.conexao.prepareStatement(sql);
+			PreparedStatement ps = this.conexao.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
 
 			ps.setString(1, noticia.getTitulo());
 			ps.setString(2, noticia.getResumo());
 			ps.setString(3, noticia.getTexto());
 
 			ps.execute();
-			ps.close();
+
+			ResultSet rs = ps.getGeneratedKeys();
+			if (rs.next()) {
+				int idGerado = rs.getInt(1);
+				return idGerado;
+			}
 		} catch (SQLException ex) {
 			ex.printStackTrace();
 		}
+		return -1;
 	}
 
 	public Noticia consultar(int id) {
