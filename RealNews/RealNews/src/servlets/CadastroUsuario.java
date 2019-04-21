@@ -13,7 +13,7 @@ import br.usjt.projetoWeb.service.UsuarioService;
 /**
  * Servlet implementation class CadastroUsuario
  */
-@WebServlet("/CadastroUsuario")
+@WebServlet("/CadastroUsuario.do")
 public class CadastroUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
