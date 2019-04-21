@@ -51,7 +51,7 @@ public class Login extends HttpServlet {
 		if (senha.equals(usuario.getSenha()) && email.equals(usuario.getEmail())) {
 			response.sendRedirect("index.html"); // logado
 		} else {
-			request.getRequestDispatcher("login.html"); // volta a pagina inicial
+			request.getRequestDispatcher("index.html"); // volta a pagina inicial
 		}
 
 	}
