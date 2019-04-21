@@ -49,7 +49,12 @@ public class CadastroComentario extends HttpServlet {
 
 		Comentario comentario = new Comentario(idNoticia, email, texto);
 		int idComentario = comentarioService.cadastrar(comentario);
-
+		
+		if(idComentario!=-1) {
+			PrintWriter pw = response.getWriter();
+			pw = System.out.println(""); // alert "cadastrado com sucesso"
+		}
+		
 		// usar id p fzr consulta e mostrar o comentario
 		// redirecionar p proxima pagina
 	}
