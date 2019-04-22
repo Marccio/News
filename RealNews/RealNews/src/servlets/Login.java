@@ -53,7 +53,6 @@ public class Login extends HttpServlet {
 		} else {
 			request.getRequestDispatcher("index.html"); // volta a pagina inicial
 		}
-
 	}
 
 }
