@@ -42,7 +42,7 @@ public class CadastroUsuario extends HttpServlet {
 		String email = request.getParameter("email");
 		String nome = request.getParameter("nome");
 		String senha = request.getParameter("senha");
-		String perfil = request.getParameter("perfil");
+		String perfil = "visitante";
 		
 		Usuario usuario = new Usuario(email, nome, senha, perfil);
 		int idUsuario = usuarioService.cadastrar(usuario);
