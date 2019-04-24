@@ -9,7 +9,7 @@ import br.usjt.projetoWeb.model.Usuario;
 public class UsuarioDAO {
 	Connection conexao;
 
-	public int cadastrar(Usuario usuario) {
+	public void cadastrar(Usuario usuario) {
 		try {
 			this.conexao = ConnectionFactory.conectar();
 
@@ -24,15 +24,9 @@ public class UsuarioDAO {
 
 			ps.execute();
 			
-			ResultSet rs = ps.getGeneratedKeys();
-			if(rs.next()) {
-				int idGerado = rs.getInt(1);
-				return idGerado;
-			}
 		} catch (SQLException ex) {
 			ex.printStackTrace();
 		}
-		return -1;
 	}
 
 	public Usuario consultar(String email) {
