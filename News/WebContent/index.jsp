@@ -387,10 +387,10 @@
                                     <div class="row">
                                             <div id="first">
                                                 <div class="myform form ">
-                                                    <form action="Cadastro.do" method="post" name="Cadastro">
+                                                    <form action="CadastroUsuario.do" method="post" name="Cadastro">
 														<div class="form-group">
                                                             <label for="inputName" style="width: 50%;text-align:center;margin-left:25%;">Nome Completo</label> <input
-                                                                type="name" name="nomeCompleto" class="form-control" id="name"
+                                                                type="name" name="nomeCompleto" class="form-control" id="nameC"
                                                                 aria-describedby="emailHelp" placeholder="Nome" style="width:300px;margin-left:15%;"  >
                                                         </div>
                                                         <div class="form-group">
@@ -406,7 +406,7 @@
                                                         </div>
                                                         <div class="col-md-12 text-center ">
                                                             <button type="submit"
-                                                                class=" btn btn-block mybtn btn-primary tx-tfm" style="margin-left:25%;width: 50%;">Cadastre-se</button>
+                                                                class=" btn btn-block mybtn btn-primary tx-tfm" style="margin-left:25%;width: 50%;" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Cadastre-se</button>
                                                         </div>
                                                         <div class="col-md-12 ">
                                                                 <div class="login-or">

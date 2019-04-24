@@ -3,6 +3,7 @@ package br.usjt.projetoWeb.servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -42,17 +43,15 @@ public class CadastroUsuario extends HttpServlet {
 		UsuarioService usuarioService = new UsuarioService();
 		
 		String email = request.getParameter("email");
-		String nome = request.getParameter("nome");
+		String nome = request.getParameter("nomeCompleto");
 		String senha = request.getParameter("senha");
 		String perfil = "Visitante";
 		
 		Usuario usuario = new Usuario(email, nome, senha, perfil);
 		usuarioService.cadastrar(usuario);
-		
-		String emailUsuario = usuario.getEmail();
-		
-		PrintWriter saida = response.getWriter();
-		saida.println(emailUsuario);
+
+    	RequestDispatcher menu = request.getRequestDispatcher("/index.jsp");
+    	menu.forward(request, response);
 	}
 
 }
