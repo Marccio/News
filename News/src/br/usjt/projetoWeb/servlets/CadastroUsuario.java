@@ -47,10 +47,12 @@ public class CadastroUsuario extends HttpServlet {
 		String perfil = "Visitante";
 		
 		Usuario usuario = new Usuario(email, nome, senha, perfil);
-		int idUsuario = usuarioService.cadastrar(usuario);
+		usuarioService.cadastrar(usuario);
+		
+		String emailUsuario = usuario.getEmail();
 		
 		PrintWriter saida = response.getWriter();
-		saida.println(idUsuario);
+		saida.println(emailUsuario);
 	}
 
 }

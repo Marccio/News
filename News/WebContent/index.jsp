@@ -396,12 +396,12 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleInputEmail1" style="width: 50%;text-align:center;margin-left:25%;">Email</label> <input
-                                                                type="email" name="email" class="form-control" id="email"
+                                                                type="email" name="email" class="form-control" id="emailC"
                                                                 aria-describedby="emailHelp" placeholder="Email"style="width:300px;margin-left:15%;"  >
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleInputEmail1" style="width: 50%;text-align:center;margin-left:25%;">Senha</label><input
-                                                                type="password" name="senha" id="senha"
+                                                                type="password" name="senha" id="passwordC"
                                                                 class="form-control" aria-describedby="emailHelp"
                                                                 placeholder="Senha" style="width:300px;margin-left:15%;">
                                                         </div>

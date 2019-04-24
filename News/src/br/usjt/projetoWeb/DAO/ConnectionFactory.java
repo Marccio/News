@@ -17,7 +17,7 @@ public class ConnectionFactory {
     public static Connection conectar() throws SQLException {
        
         return DriverManager.getConnection
-                ("jdbc:mysql://localhost/realNews", "root", "Marcinho@1998");
+                ("jdbc:mysql://localhost:8080/realNews", "root", "Marcinho@1998");
        
     }
    
