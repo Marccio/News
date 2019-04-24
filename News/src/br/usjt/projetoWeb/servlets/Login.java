@@ -51,9 +51,7 @@ public class Login extends HttpServlet {
 		Usuario usuario = usuarioService.consultar(email);
 
 		if (usuario != null &&
-				usuario.getSenha() != null &&
-				senha.equals(
-						usuario.getSenha())) {
+				usuario.getSenha() != null && senha.equals(usuario.getSenha())) {
 			request.getSession().setAttribute("usuario", usuario);
         	RequestDispatcher menu = request.getRequestDispatcher("/index.jsp");
         	menu.forward(request, response);

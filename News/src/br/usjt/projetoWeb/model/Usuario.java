@@ -47,5 +47,8 @@ public class Usuario {
 		this.perfil = perfil;
 	}
 	
+	public Usuario getUsuario() {
+		return new Usuario();
+	}
 	 
 }

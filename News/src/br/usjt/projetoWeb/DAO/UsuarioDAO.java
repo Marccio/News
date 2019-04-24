@@ -33,7 +33,7 @@ public class UsuarioDAO {
 		try {
 			this.conexao = ConnectionFactory.conectar();
 
-			String sql = "SELECT * usuario WHERE email=?";
+			String sql = "SELECT * FROM usuario WHERE email = ?";
 			PreparedStatement ps = this.conexao.prepareStatement(sql);
 
 			ps.setString(1, email);
