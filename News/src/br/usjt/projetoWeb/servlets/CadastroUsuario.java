@@ -1,6 +1,8 @@
 package br.usjt.projetoWeb.servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -42,10 +44,13 @@ public class CadastroUsuario extends HttpServlet {
 		String email = request.getParameter("email");
 		String nome = request.getParameter("nome");
 		String senha = request.getParameter("senha");
-		String perfil = "visitante";
+		String perfil = "Visitante";
 		
 		Usuario usuario = new Usuario(email, nome, senha, perfil);
 		int idUsuario = usuarioService.cadastrar(usuario);
+		
+		PrintWriter saida = response.getWriter();
+		saida.println(idUsuario);
 	}
 
 }
