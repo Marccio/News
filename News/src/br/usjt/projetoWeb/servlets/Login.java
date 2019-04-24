@@ -1,6 +1,8 @@
 package br.usjt.projetoWeb.servlets;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,7 +15,7 @@ import br.usjt.projetoWeb.service.UsuarioService;
 /**
  * Servlet implementation class Login
  */
-@WebServlet("Login.do")
+@WebServlet("/Login.do")
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	UsuarioService usuarioService;
@@ -44,14 +46,22 @@ public class Login extends HttpServlet {
 		usuarioService = new UsuarioService();
 
 		String email = request.getParameter("email");
-		String senha = request.getParameter("senha");
+		String senha = request.getParameter("password");
 
 		Usuario usuario = usuarioService.consultar(email);
 
-		if (senha.equals(usuario.getSenha()) && email.equals(usuario.getEmail())) {
-			response.sendRedirect("index.html"); // logado
+		if (usuario != null &&
+				usuario.getSenha() != null &&
+				senha.equals(
+						usuario.getSenha())) {
+			request.getSession().setAttribute("usuario", usuario);
+        	RequestDispatcher menu = request.getRequestDispatcher("/index.jsp");
+        	menu.forward(request, response);
 		} else {
-			request.getRequestDispatcher("index.html"); // volta a pagina inicial
+        	request.getSession().invalidate();
+        	response.setStatus(403);
+        	response.setContentType("text/plain");
+        	response.getWriter().println("Senha incorreta!");
 		}
 	}
 
