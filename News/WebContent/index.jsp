@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ include file="Navbar.jsp" %>
+<%@ include file="Navbar.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +18,7 @@
 <body>
 
 
-<div class="container">
+<div class="container" style= heigth:100%>
     <div class="row mb-2">
         <div class="col-12 text-center pt-3">
         </div>
@@ -48,24 +48,21 @@
                                     <div class="position-relative">
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
-                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                <img class="img-fluid w-100"
-                                                     src="https://bootstrap.news/source/img1.jpg"
-                                                     alt="Image description">
+                                            <a href="#">
+                                                <img class="img-fluid w-100 h-50"
+                                                     src="Resources/blackhole.jpg"
+                                                     alt=""
+                                                     >
                                             </a>
                                         </div>
                                         
                                         <!--title-->
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                             <!--title and description-->
-                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                <h2 class="h3 post-title text-white my-1">Superstar calls for football clean up amid series of shocking allegations</h2>
+                                            <a href="#">
+                                                <h2 class="h3 post-title text-white my-1">Primeira imagem do buraco negro</h2>
                                             </a>
-
-                                            <!-- meta title -->
-                                            <div class="news-meta">
-                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Jennifer</a></span>
-                                            </div>
+                                            
                                         </div>
                                         <!--end title-->
                                     </div>
@@ -80,24 +77,19 @@
                                     <div class="position-relative">
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
-                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                <img class="img-fluid w-100"
-                                                     src="https://bootstrap.news/source/img2.jpg"
-                                                     alt="Image description">
+                                            <a href="#">
+                                                <img class="img-fluid w-100 h-50"
+                                                     src="Resources/saudeee.jpeg"
+                                                     alt="">
                                             </a>
                                         </div>
                                         
                                         <!--title-->
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                             <!--title and description-->
-                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                <h2 class="h3 post-title text-white my-1">Walmart shares up 10% on online sales lift</h2>
+                                            <a href="#">
+                                                <h2 class="h3 post-title text-white my-1">Como a tecnologia está revolucionando a indústria da saúde</h2>
                                             </a>
-
-                                            <!-- meta title -->
-                                            <div class="news-meta">
-                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Jennifer</a></span>
-                                            </div>
                                         </div>
                                         <!--end title-->
                                     </div>
@@ -112,24 +104,21 @@
                                     <div class="position-relative">
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
-                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                <img class="img-fluid w-100"
-                                                     src="https://bootstrap.news/source/img3.jpg"
-                                                     alt="Image description">
+                                            <a href="#">
+                                                <img class="img-fluid w-100 h-50"
+                                                     src="Resources/Biden.jpg"
+                                                     alt="">
                                             </a>
                                         </div>
 
                                         <!--title-->
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                             <!--title and description-->
-                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                <h2 class="h3 post-title text-white my-1">Bank chief warns on Brexit staff moves to other company</h2>
+                                            <a href="#">
+                                                <h2 class="h3 post-title text-white my-1">Joe Biden anuncia pré-candidatura à presidência dos EUA</h2>
                                             </a>
 
                                             <!-- meta title -->
-                                            <div class="news-meta">
-                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Jennifer</a></span>
-                                            </div>
                                         </div>
                                         <!--end title-->
                                     </div>
@@ -144,24 +133,19 @@
                                     <div class="position-relative">
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
-                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                <img class="img-fluid w-100"
-                                                     src="https://bootstrap.news/source/img4.jpg"
-                                                     alt="Image description">
+                                            <a href="#">
+                                                <img class="img-fluid w-100 h-50"
+                                                     src="Resources/mala.jpeg"
+                                                     alt="">
                                             </a>
                                         </div>
 
                                         <!--title-->
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                             <!--title and description-->
-                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                <h2 class="h3 post-title text-white my-1">The world's first floating farm making waves in Rotterdam</h2>
+                                            <a href="#">
+                                                <h2 class="h3 post-title text-white my-1">Mala de mão fora do padrão começa a ser despachada em aeroportos</h2>
                                             </a>
-
-                                            <!-- meta title -->
-                                            <div class="news-meta">
-                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Jennifer</a></span>
-                                            </div>
                                         </div>
                                         <!--end title-->
                                     </div>
@@ -175,11 +159,11 @@
                     <!--navigation-->
                     <a class="carousel-control-prev" href="#featured" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
+                        <span class="sr-only">Anterior</span>
                     </a>
                     <a class="carousel-control-next" href="#featured" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
+                        <span class="sr-only">Próximo</span>
                     </a>
                 </div>
                 <!--End slider news-->
@@ -194,21 +178,21 @@
                                 <div class="position-relative">
                                     <!--thumbnail img-->
                                     <div class="ratio_right-cover-2 image-wrapper">
-                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                            <img class="img-fluid"
-                                                 src="https://bootstrap.news/source/img5.jpg"
-                                                 alt="Image description">
+                                        <a href="#">
+                                            <img class="img-fluid h-25"
+                                                 src="Resources/Paint.jpeg"
+                                                 alt="">
                                         </a>
                                     </div>
                                     
                                     <!--title-->
                                     <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                         <!-- category -->
-                                        <a class="p-1 badge badge-primary rounded-0" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Lifestyle</a>
+                                        <a class="p-1 badge badge-primary rounded-0" href="#"></a>
 
                                         <!--title and description-->
-                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                            <h2 class="h5 text-white my-1">Should you see the Fantastic Beasts sequel?</h2>
+                                        <a href="#">
+                                            <h2 class="h5 text-white my-1">Fãs de Microsoft Paint comemoram decisão da empresa de manter programa no Windows</h2>
                                         </a>
                                     </div>
                                     <!--end title-->
@@ -224,21 +208,23 @@
                                 <div class="position-relative">
                                     <!--thumbnail img-->
                                     <div class="ratio_right-cover-2 image-wrapper">
-                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                            <img class="img-fluid"
-                                                 src="https://bootstrap.news/source/img6.jpg"
-                                                 alt="Image description">
+                                        <a href="#">
+                                            <img class="img-fluid h-25"
+                                                 src="Resources/notre dame.jpeg"
+                                                 alt=""
+                                                 width="600"
+                                                 height="600">
                                         </a>
                                     </div>
                                     
                                     <!--title-->
                                     <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                         <!-- category -->
-                                        <a class="p-1 badge badge-primary rounded-0" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Motocross</a>
+                                        <a class="p-1 badge badge-primary rounded-0" href="#"></a>
 
                                         <!--title and description-->
-                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                            <h2 class="h5 text-white my-1">Three myths about Florida elections recount</h2>
+                                        <a href="#">
+                                            <h2 class="h5 text-white my-1">Notre-Dame: primeiro alerta de fogo teria falhado por erro humano</h2>
                                         </a>
                                     </div>
                                     <!--end title-->
@@ -254,21 +240,23 @@
                                 <div class="position-relative">
                                     <!--thumbnail img-->
                                     <div class="ratio_right-cover-2 image-wrapper">
-                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                            <img class="img-fluid"
-                                                 src="https://bootstrap.news/source/img7.jpg"
-                                                 alt="Image description">
+                                        <a href="#">
+                                            <img class="img-fluid h-25"
+                                                 src="Resources/Liz O'Riordan.jpeg"
+                                                 alt=""
+                                                 width="600"
+                                                 height="600">
                                         </a>
                                     </div>
                                     
                                     <!--title-->
                                     <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                         <!-- category -->
-                                        <a class="p-1 badge badge-primary rounded-0" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Fitness</a>
+                                        <a class="p-1 badge badge-primary rounded-0" href="#"></a>
 
                                         <!--title and description-->
                                         <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                            <h2 class="h5 text-white my-1">Finding Empowerment in Two Wheels and a Helmet</h2>
+                                            <h2 class="h5 text-white my-1">"Como sou cirurgiã de câncer de mama, pensei que não aconteceria comigo"</h2>
                                         </a>
                                     </div>
                                     <!--end title-->
@@ -284,21 +272,23 @@
                                 <div class="position-relative">
                                     <!--thumbnail img-->
                                     <div class="ratio_right-cover-2 image-wrapper">
-                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                            <img class="img-fluid"
-                                                 src="https://bootstrap.news/source/img8.jpg"
-                                                 alt="Image description">
+                                        <a href="#">
+                                            <img class="img-fluid h-25"
+                                                 src="Resources/Convivio entre geracoes.jpg"
+                                                 alt=""
+                                                 width="600"
+                                                 height="600">
                                         </a>
                                     </div>
                                     
                                     <!--title-->
                                     <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                         <!-- category -->
-                                        <a class="p-1 badge badge-primary rounded-0" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Adventure</a>
+                                        <a class="p-1 badge badge-primary rounded-0" href="#"></a>
 
                                         <!--title and description-->
-                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                            <h2 class="h5 text-white my-1">Ditch receipts and four other tips to be a shopper</h2>
+                                        <a href="#">
+                                            <h2 class="h5 text-white my-1">Produtos para estimular o convívio entre gerações</h2>
                                         </a>
                                     </div>
                                     <!--end title-->

@@ -37,24 +37,25 @@ public class NoticiaDAO {
 
 	public Noticia consultar(int id) {
 		try {
-		this.conexao = ConnectionFactory.conectar();
-		
-		String sql = "SELECT * FROM noticia WHERE id=?";
-		PreparedStatement ps = this.conexao.prepareStatement(sql);
-		
-		ps.setInt(1, id);
-		ResultSet rs = ps.executeQuery();
-		
-		if(rs.next()) {
-			Noticia noticia = new Noticia();
-			noticia.setTitulo(rs.getString("titulo"));
-			noticia.setResumo(rs.getString("resumo"));
-			noticia.setTexto(rs.getString("texto"));
-			
-			return noticia;	
-		} else return null;
-		} catch(SQLException ex)	{
-		ex.printStackTrace();
+			this.conexao = ConnectionFactory.conectar();
+
+			String sql = "SELECT * FROM noticia WHERE id=?";
+			PreparedStatement ps = this.conexao.prepareStatement(sql);
+
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+
+			if (rs.next()) {
+				Noticia noticia = new Noticia();
+				noticia.setTitulo(rs.getString("titulo"));
+				noticia.setResumo(rs.getString("resumo"));
+				noticia.setTexto(rs.getString("texto"));
+
+				return noticia;
+			} else
+				return null;
+		} catch (SQLException ex) {
+			ex.printStackTrace();
 		}
 		return null;
 	}
@@ -86,4 +87,5 @@ public class NoticiaDAO {
 			ex.printStackTrace();
 		}
 	}
+
 }

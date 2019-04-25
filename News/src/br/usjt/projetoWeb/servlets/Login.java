@@ -57,9 +57,8 @@ public class Login extends HttpServlet {
         	menu.forward(request, response);
 		} else {
         	request.getSession().invalidate();
-        	response.setStatus(403);
-        	response.setContentType("text/plain");
-        	response.getWriter().println("Senha incorreta!");
+        	RequestDispatcher menu = request.getRequestDispatcher("/index.jsp");
+        	menu.forward(request, response);
 		}
 	}
 
