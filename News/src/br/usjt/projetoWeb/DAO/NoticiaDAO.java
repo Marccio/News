@@ -14,13 +14,14 @@ public class NoticiaDAO {
 		try {
 			this.conexao = ConnectionFactory.conectar();
 
-			String sql = "INSERT INTO noticia (titulo, resumo, texto) VALUES (?,?,?)";
+			String sql = "INSERT INTO noticia (titulo, resumo, texto, img) VALUES (?,?,?,?)";
 
 			PreparedStatement ps = this.conexao.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
 
 			ps.setString(1, noticia.getTitulo());
 			ps.setString(2, noticia.getResumo());
 			ps.setString(3, noticia.getTexto());
+			ps.setString(4, noticia.getImg());
 
 			ps.execute();
 
@@ -50,6 +51,7 @@ public class NoticiaDAO {
 				noticia.setTitulo(rs.getString("titulo"));
 				noticia.setResumo(rs.getString("resumo"));
 				noticia.setTexto(rs.getString("texto"));
+				noticia.setImg(rs.getString("img"));
 
 				return noticia;
 			} else
@@ -74,13 +76,14 @@ public class NoticiaDAO {
 
 	public void alterar(Noticia noticia) {
 		try {
-			String sql = "UPDATE noticia SET titulo=?, resumo=?, texto=? WHERE id=?";
+			String sql = "UPDATE noticia SET titulo=?, resumo=?, texto=?, img=? WHERE id=?";
 			PreparedStatement ps = this.conexao.prepareStatement(sql);
 
 			ps.setString(1, noticia.getTitulo());
 			ps.setString(2, noticia.getResumo());
 			ps.setString(3, noticia.getTexto());
-			ps.setInt(4, noticia.getIdNoticia());
+			ps.setString(4, noticia.getImg());
+			ps.setInt(5, noticia.getIdNoticia());
 
 			ps.execute();
 		} catch (SQLException ex) {

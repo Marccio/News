@@ -274,7 +274,7 @@
                                     <div class="ratio_right-cover-2 image-wrapper">
                                         <a href="#">
                                             <img class="img-fluid h-25"
-                                                 src="Resources/Convivio entre geracoes.jpg"
+                                                 src="Resources/Convivio.jpg"
                                                  alt=""
                                                  width="600"
                                                  height="600">
