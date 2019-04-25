@@ -49,9 +49,9 @@ public class CadastroUsuario extends HttpServlet {
 		
 		Usuario usuario = new Usuario(email, nome, senha, perfil);
 		usuarioService.cadastrar(usuario);
-
-    	RequestDispatcher menu = request.getRequestDispatcher("/index.jsp");
-    	menu.forward(request, response);
+		
+		
+    	response.sendRedirect("index.jsp");
 	}
 
 }

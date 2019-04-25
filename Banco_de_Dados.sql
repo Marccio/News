@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS usuario;
 CREATE TABLE usuario (
 	email VARCHAR(50),
     senha VARCHAR(50),
-	nome VARCHAR(50),
+	nome VARCHAR(50),	
     perfil VARCHAR(50),
     PRIMARY KEY (email)
     )ENGINE = InnoDB;
