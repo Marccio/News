@@ -45,6 +45,7 @@
 				<ul class="nav navbar-nav ml-auto">
 					<li class="nav-item active"><a class="nav-link">Logado como ${usuario.nome}</a></li>
 					<li class="nav-item active"><a class="nav-link" href="#">Criar Notícia</a></li>
+					<li class="nav-item active"><a class="nav-link" href="#">Buscar Notícia</a></li>
 					<li class="nav-item active"><a class="nav-link" href="logout.do">Sair</a></li>
 				</ul>
 			</div>
@@ -159,7 +160,7 @@
                                                         </div>
                                                         <div class="col-md-12 text-center ">
                                                             <button type="submit"
-                                                                class=" btn btn-block mybtn btn-primary tx-tfm" style="margin-left:25%;width: 50%;" data-toggle="modal" data-target="#loginModal" onclick="cadastrado()">Cadastre-se</button>
+                                                                class=" btn btn-block mybtn btn-primary tx-tfm" style="margin-left:25%;width: 50%;" data-toggle="modal" data-target="#loginModal" onclick="cadastrado()" >Cadastre-se</button>
                                                         </div>
 
                                                         <div class="col-md-12 ">
