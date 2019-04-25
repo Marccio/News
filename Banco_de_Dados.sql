@@ -36,9 +36,11 @@ CREATE TABLE noticia(
 
 INSERT INTO noticia(titulo, resumo, texto, email_Usuario, img) VALUES ('Primeira imagem do buraco negro',
 'Visualizar um buraco negro era o sonho de muitos físicos. Ele foi finalmente realizado pela equipe de 200 cientistas do projeto Event Horizon Telescope (EHT), que divulgou imagens de um buraco negro pela primeira vez na história na quarta-feira (10).',
- 'Desde o início das observações no projeto até a publicação dos resultados, foram dois anos de muito trabalho. A sincronização de oito telescópios produziu a imagem tão esperada do buraco negro na galáxia M87.
+ 'Desde o início das observações no projeto até a publicação dos resultados, foram dois anos de muito trabalho. 
+ A sincronização de oito telescópios produziu a imagem tão esperada do buraco negro na galáxia M87.
 Antes disso, cientistas vinham estudando buracos negros pelo menos desde o século 18. Há cerca de duas décadas chegaram à conclusão de que seria possível obter uma imagem do círculo de luz, ou da sombra do buraco negro, por meio de radiotelescópios.
-Muitas simulações e imagens computadorizadas foram produzidas pelos estudiosos e várias delas foram publicadas com a primeira foto do buraco negro. A imagem do anel de luz em torno de um ponto escuro no universo despertou a curiosidade de muita gente.', 
+Muitas simulações e imagens computadorizadas foram produzidas pelos estudiosos e várias delas foram publicadas com a primeira foto do buraco negro. 
+A imagem do anel de luz em torno de um ponto escuro no universo despertou a curiosidade de muita gente.', 
  'vitoriapaulafofa@ig.com.br','Resources/blackhole.jpg');
     
 INSERT INTO noticia(titulo, resumo, texto, email_Usuario, img) VALUES ('Como a tecnologia está revolucionando a indústria da saúde',

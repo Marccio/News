@@ -47,7 +47,7 @@
                                     <div class="position-relative">
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
-                                            <a href="#">
+                                            <a href="noticia.jsp">
                                                 <img class="img-fluid w-100 h-50"
                                                      src="Resources/blackhole.jpg"
                                                      alt=""
@@ -58,7 +58,7 @@
                                         <!--title-->
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                             <!--title and description-->
-                                            <a href="#">
+                                            <a href="noticia.jsp">
                                                 <h2 class="h3 post-title text-white my-1">Primeira imagem do buraco negro</h2>
                                             </a>
                                             

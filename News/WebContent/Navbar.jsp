@@ -43,9 +43,9 @@
 			%>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="nav navbar-nav ml-auto">
-					<li class="nav-item active"><a class="nav-link">Logado como ${usuario.nome}</a></li>
+					<li class="nav-item active"><a class="nav-link">Logado como Administrador</a></li>
 					<li class="nav-item active"><a class="nav-link" href="#">Criar Notícia</a></li>
-					<li class="nav-item active"><a class="nav-link" href="#">Buscar Notícia</a></li>
+					<li class="nav-item active"><a class="nav-link" href="#">Notícias</a></li>
 					<li class="nav-item active"><a class="nav-link" href="logout.do">Sair</a></li>
 				</ul>
 			</div>
