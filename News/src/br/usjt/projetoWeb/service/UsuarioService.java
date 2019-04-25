@@ -1,40 +1,29 @@
 package br.usjt.projetoWeb.service;
 
-import java.util.ArrayList;
+import br.usjt.projetoWeb.DAO.UsuarioDAO;
+import br.usjt.projetoWeb.model.Usuario;
 
-import br.usjt.projetoWeb.DAO.NoticiaDAO;
-import br.usjt.projetoWeb.model.Noticia;
-
-public class NoticiaService {
+public class UsuarioService {
 	
-	NoticiaDAO noticiaDAO;
+	UsuarioDAO usuarioDAO;
 	
-	public NoticiaService() {
-		this.noticiaDAO = new NoticiaDAO();
+	public UsuarioService() {
+		this.usuarioDAO = new UsuarioDAO();
 	}
 	
-	public int cadastrar(Noticia noticia) {
-		return this.noticiaDAO.cadastrar(noticia);
+	public void cadastrar(Usuario usuario) {
+		this.usuarioDAO.cadastrar(usuario);
 	}
 	
-	public Noticia consultar(int id) {
-		return this.noticiaDAO.consultar(id);
+	public Usuario consultar(String email) {
+		return this.usuarioDAO.consultar(email);
 	}
 	
-	public void excluir(int id) {
-		this.noticiaDAO.excluir(id);
+	public void excluir(String email) {
+		this.usuarioDAO.excluir(email);
 	}
 	
-	public void alterar(Noticia noticia) {
-		this.noticiaDAO.alterar(noticia);
+	public void alterar(Usuario usuario) {
+		this.usuarioDAO.alterar(usuario);
 	}
-	
-	public ArrayList<Integer> listarNoticias(){
-		return this.noticiaDAO.listarNoticias();
-	}
-	
-	public ArrayList<Integer> buscarNoticias(String titulo){
-		return this.noticiaDAO.buscarNoticia(titulo);
-	}
-
 }
