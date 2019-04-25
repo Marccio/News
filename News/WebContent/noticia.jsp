@@ -55,9 +55,19 @@
 		<h3 align="center"> Comentarios </h3><br>
 	</div>	
 	<div align="center" >
-		<label for="comentario" ><h4> ${usuario.nome}</h4></label><br>
-		<input type="text" id=comentario style=width:500px>
+	<%if(usuario == null){%>
+		<label for="comentario" >
+		<h4>Anonimo</h4></label><br>		
+	<% }else{%>
+		<label for="comentario" >
+		<h4> ${usuario.nome}</h4></label><br>
+			
+	<%} %>
+		<input type="text" id=comentario style=width:500px><br>
+		<input type="button" class=" btn btn-block mybtn btn-primary tx-tfm" name="btnComentar" value="Comentar">
 	</div>
+	
+	
 </div>
 
 </div>
