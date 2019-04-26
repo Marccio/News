@@ -79,7 +79,7 @@
 				<br>
 			</div>
 			<%
-				String email = "${usuario.email}";
+				String email = usuario.getEmail();
 			%>
 			<div align="left">
 
@@ -99,6 +99,7 @@
 				<%
 					}
 				%>
+				<%System.out.println(email);%>
 				<form action="CadastroComentario.do?id=<%=id%>&email=<%=email%>"
 					method="post" name="id" name="email">
 					<div class="form-group">
