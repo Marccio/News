@@ -1,0 +1,9 @@
+
+News/.classpath
+News/.classpath
+News/build/classes/br/usjt/projetoWeb/DAO/ConnectionFactory.class
+News/src/br/usjt/projetoWeb/DAO/ConnectionFactory.java
+*.jsp
+*.java
+News/build/classes/br/usjt/projetoWeb/DAO/ConnectionFactory.class
+News/.classpath
