@@ -18,13 +18,15 @@ public class NoticiaDAO {
 		try {
 			this.conexao = ConnectionFactory.conectar();
 
-			String sql = "INSERT INTO noticia (titulo, resumo, texto) VALUES (?,?,?)";
+			String sql = "INSERT INTO noticia (titulo, resumo, texto, email_Usuario, img) VALUES (?, ?, ?,?,?)";
 
 			PreparedStatement ps = this.conexao.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
 
 			ps.setString(1, noticia.getTitulo());
 			ps.setString(2, noticia.getResumo());
 			ps.setString(3, noticia.getTexto());
+			ps.setString(4, noticia.getEmail());
+			ps.setString(5, noticia.getImg());
 
 			ps.execute();
 
@@ -55,6 +57,7 @@ public class NoticiaDAO {
 			noticia.setTitulo(rs.getString("titulo"));
 			noticia.setResumo(rs.getString("resumo"));
 			noticia.setTexto(rs.getString("texto"));
+			noticia.setEmail(rs.getString("email_Usuario"));
 			noticia.setImg(rs.getString("img"));
 			
 			return noticia;	
@@ -122,13 +125,16 @@ public class NoticiaDAO {
 	public ArrayList<Integer> listarIds() {
 		try {
 			this.conexao = ConnectionFactory.conectar();
-			String sql = "SELECT id FROM noticia ORDER BY id DESC LIMIT 8";
+			
+			String sql = "SELECT id FROM noticia ORDER BY id DESC";
 			PreparedStatement ps = this.conexao.prepareStatement(sql);
+			
 			ResultSet rs = ps.executeQuery();
 			ArrayList<Integer> lista = new ArrayList<Integer>();
 			while(rs.next()) {
 				lista.add(rs.getInt("id"));
 			}
+			
 			return lista;
 			
 		} catch (SQLException ex) {
