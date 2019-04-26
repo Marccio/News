@@ -79,7 +79,7 @@
 				<br>
 			</div>
 			<%
-				String email = usuario.getEmail();
+				String email = "${usuario.email}";
 			%>
 			<div align="left">
 
@@ -90,7 +90,8 @@
 						String emailC = comentario.getEmail();
 						String textoC = comentario.getTexto();
 				%>
-				<h4><%=emailC%></h4>
+				
+				<h4><img src="Resources/avatar.png" alt="avatar" style= "vertical-align:middle; width: 50px; height: 50px ;border-radius: 50%;">  <%=emailC%></h4>
 				<br>
 				<p style= "font-size:22">
 					<%=textoC%></p>
