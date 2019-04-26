@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="UTF-8"%>
+	pageEncoding="ISO-8859-1"%>
 <%@ page import="br.usjt.projetoWeb.model.Usuario"%>
 
 <head>
@@ -19,7 +19,7 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-dark bg-primary"">
+	<nav class="navbar sticky-top navbar-dark bg-primary ">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="index.jsp"><h1>RealNews</h1></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
