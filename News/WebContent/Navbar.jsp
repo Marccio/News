@@ -44,8 +44,8 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="nav navbar-nav ml-auto">
 					<li class="nav-item active"><a class="nav-link">Logado como Administrador</a></li>
-					<li class="nav-item active"><a class="nav-link" href="#">Criar NotÃ­cia</a></li>
-					<li class="nav-item active"><a class="nav-link" href="#">NotÃ­cias</a></li>
+					<li class="nav-item active"><a class="nav-link" href="#">Criar Notícia</a></li>
+					<li class="nav-item active"><a class="nav-link" href="#">Notícias</a></li>
 					<li class="nav-item active"><a class="nav-link" href="logout.do">Sair</a></li>
 				</ul>
 			</div>
@@ -100,7 +100,7 @@
                                                         </div>
                                                         <div class="col-md-12 text-center ">
                                                             <button type="submit"
-                                                                class=" btn btn-block mybtn btn-primary tx-tfm" style="margin-left:25%;width: 50%;" onclick="<%=response.sendRedirect("index.jsp") %>">Login</button>
+                                                                class=" btn btn-block mybtn btn-primary tx-tfm" style="margin-left:25%;width: 50%;">Login</button>
                                                         </div>
                                                         <div class="col-md-12 ">
                                                                 <div class="login-or">
@@ -110,7 +110,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <p class="text-center">
-                                                                VocÃª nÃ£o tem uma conta? <br>
+                                                                Você não tem uma conta? <br>
                                                                 <a href="#" id="signup" data-toggle="modal" data-target="#cadastroModal" data-dismiss="modal">Cadastre-se agora</a>
                                                             </p>
                                                         </div>

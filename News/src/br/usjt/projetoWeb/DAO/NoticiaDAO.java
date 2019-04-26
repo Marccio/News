@@ -55,6 +55,7 @@ public class NoticiaDAO {
 			noticia.setTitulo(rs.getString("titulo"));
 			noticia.setResumo(rs.getString("resumo"));
 			noticia.setTexto(rs.getString("texto"));
+			noticia.setImg(rs.getString("img"));
 			
 			return noticia;	
 		} else return null;

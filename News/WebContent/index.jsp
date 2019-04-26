@@ -50,7 +50,7 @@
                             <!--Item slider-->
                             <%  int id = (int)lista.get(0);
                             Noticia noticia = noticiaService.consultar(id); 
-                            String img = noticia.getImg();%>
+                            %>
                             <div class="carousel-item active">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
                                     <!--thumbnail-->
@@ -59,14 +59,14 @@
                                         <div class="ratio_left-cover-1 image-wrapper">
                                             <a href="noticia.jsp?id=<%=id %>" name="id">
                                                 <img class="img-fluid w-100 h-50"
-                                                     src="Resources/blackhole.jpg"
+                                                     src="<%=noticia.getImg()%>"
                                                      alt="">
                                             </a>
                                         </div>
                                         <!--title-->
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                             <!--title and description-->
-                                            <a href="noticia.jsp">
+                                            <a href="noticia.jsp?id=<%=id %>" name="id">
                                                 <h2 class="h3 post-title text-white my-1"><%=noticia.getTitulo() %></h2>
                                             </a>
                                             
@@ -78,7 +78,7 @@
                             </div>
                             <%  int id1 = (int)lista.get(1);
                             Noticia noticia1 = noticiaService.consultar(id1); 
-                            String img1 = noticia.getImg();%>
+                            %>
                             <!--Item slider-->
                             <div class="carousel-item">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
@@ -86,9 +86,9 @@
                                     <div class="position-relative">
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
-                                            <a href="#">
+                                            <a href="noticia.jsp?id=<%=id1 %>" name="id">
                                                 <img class="img-fluid w-100 h-50"
-                                                     src="Resources/saudeee.jpeg"
+                                                     src="<%=noticia1.getImg()%>"
                                                      alt="">
                                             </a>
                                         </div>
@@ -96,7 +96,7 @@
                                         <!--title-->
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                             <!--title and description-->
-                                            <a href="#">
+                                            <a href="noticia.jsp?id=<%=id1 %>" name="id">
                                                 <h2 class="h3 post-title text-white my-1"><%=noticia1.getTitulo() %></h2>
                                             </a>
                                         </div>
@@ -107,7 +107,7 @@
                             </div>
                             <%  int id2 = (int)lista.get(2);
                             Noticia noticia2 = noticiaService.consultar(id2); 
-                            String img2 = noticia.getImg();%>
+                            %>
                             <!--Item slider-->
                             <div class="carousel-item">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
@@ -115,9 +115,9 @@
                                     <div class="position-relative">
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
-                                            <a href="#">
+                                            <a href="noticia.jsp?id=<%=id2 %>" name="id">
                                                 <img class="img-fluid w-100 h-50"
-                                                     src="Resources/Biden.jpg"
+                                                     src="<%=noticia2.getImg()%>"
                                                      alt="">
                                             </a>
                                         </div>
@@ -125,7 +125,7 @@
                                         <!--title-->
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                             <!--title and description-->
-                                            <a href="#">
+                                            <a href="noticia.jsp?id=<%=id2 %>" name="id">
                                                 <h2 class="h3 post-title text-white my-1"><%=noticia2.getTitulo() %></h2>
                                             </a>
 
@@ -138,7 +138,7 @@
                             </div>
                             <%  int id3 = (int)lista.get(3);
                             Noticia noticia3 = noticiaService.consultar(id3); 
-                            String img3 = noticia.getImg();%>
+                            %>
                             <!--Item slider-->
                             <div class="carousel-item">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
@@ -146,9 +146,9 @@
                                     <div class="position-relative">
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
-                                            <a href="#">
+                                            <a href="noticia.jsp?id=<%=id3 %>" name="id">
                                                 <img class="img-fluid w-100 h-50"
-                                                     src="Resources/mala.jpeg"
+                                                     src="<%=noticia3.getImg()%>"
                                                      alt="">
                                             </a>
                                         </div>
@@ -156,7 +156,7 @@
                                         <!--title-->
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                             <!--title and description-->
-                                            <a href="#">
+                                            <a href="noticia.jsp?id=<%=id3 %>" name="id">
                                                 <h2 class="h3 post-title text-white my-1"><%=noticia3.getTitulo() %></h2>
                                             </a>
                                         </div>
@@ -184,7 +184,7 @@
                 <!--Start box news-->
                 <%  int id4 = (int)lista.get(4);
                     Noticia noticia4 = noticiaService.consultar(id4); 
-                    String img4 = noticia.getImg();%>
+                    %>
                 <div class="col-12 col-md-6 pt-2 pl-md-1 mb-3 mb-lg-4">
                     <div class="row">
                         <!--news box-->
@@ -194,9 +194,9 @@
                                 <div class="position-relative">
                                     <!--thumbnail img-->
                                     <div class="ratio_right-cover-2 image-wrapper">
-                                        <a href="#">
+                                        <a href="noticia.jsp?id=<%=id4 %>" name="id">
                                             <img class="img-fluid h-25"
-                                                 src="Resources/Paint.jpeg"
+                                                 src="<%=noticia4.getImg()%>"
                                                  alt="">
                                         </a>
                                     </div>
@@ -207,7 +207,7 @@
                                         <a class="p-1 badge badge-primary rounded-0" href="#"></a>
 
                                         <!--title and description-->
-                                        <a href="#">
+                                        <a href="noticia.jsp?id=<%=id4 %>" name="id">
                                             <h2 class="h5 text-white my-1"><%=noticia4.getTitulo() %></h2>
                                         </a>
                                     </div>
@@ -218,7 +218,7 @@
                         </div>
                         <%  int id5 = (int)lista.get(5);
                             Noticia noticia5 = noticiaService.consultar(id5); 
-                            String img5 = noticia.getImg();%>
+                            %>
                         <!--news box-->
                         <div class="col-6 pb-1 pl-1 pt-0">
                             <div class="card border-0 rounded-0 text-white overflow zoom">
@@ -226,9 +226,9 @@
                                 <div class="position-relative">
                                     <!--thumbnail img-->
                                     <div class="ratio_right-cover-2 image-wrapper">
-                                        <a href="#">
+                                        <a href="noticia.jsp?id=<%=id5 %>" name="id">
                                             <img class="img-fluid h-25"
-                                                 src="Resources/notre dame.jpeg"
+                                                 src="<%=noticia5.getImg()%>"
                                                  alt=""
                                                  width="600"
                                                  height="600">
@@ -241,7 +241,7 @@
                                         <a class="p-1 badge badge-primary rounded-0" href="#"></a>
 
                                         <!--title and description-->
-                                        <a href="#">
+                                        <a href="noticia.jsp?id=<%=id5 %>" name="id">
                                             <h2 class="h5 text-white my-1"><%=noticia5.getTitulo() %></h2>
                                         </a>
                                     </div>
@@ -252,7 +252,7 @@
                         </div>
                         <%  int id6 = (int)lista.get(6);
                             Noticia noticia6 = noticiaService.consultar(id6); 
-                            String img6 = noticia.getImg();%>
+                        	%>
                         <!--news box-->
                         <div class="col-6 pb-1 pr-1 pt-1">
                             <div class="card border-0 rounded-0 text-white overflow zoom">
@@ -260,9 +260,9 @@
                                 <div class="position-relative">
                                     <!--thumbnail img-->
                                     <div class="ratio_right-cover-2 image-wrapper">
-                                        <a href="#">
+                                        <a href="noticia.jsp?id=<%=id6 %>" name="id">
                                             <img class="img-fluid h-25"
-                                                 src="Resources/Liz O'Riordan.jpeg"
+                                                 src="<%=noticia6.getImg()%>"
                                                  alt=""
                                                  width="600"
                                                  height="600">
@@ -275,7 +275,7 @@
                                         <a class="p-1 badge badge-primary rounded-0" href="#"></a>
 
                                         <!--title and description-->
-                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                        <a href="noticia.jsp?id=<%=id6 %>" name="id">
                                             <h2 class="h5 text-white my-1"><%=noticia6.getTitulo() %></h2>
                                         </a>
                                     </div>
@@ -286,7 +286,7 @@
                         </div>
                         <%  int id7 = (int)lista.get(7);
                             Noticia noticia7 = noticiaService.consultar(id7); 
-                            String img7 = noticia.getImg();%>
+                            %>
                         <!--news box-->
                         <div class="col-6 pb-1 pl-1 pt-1">
                             <div class="card border-0 rounded-0 text-white overflow zoom">
@@ -294,9 +294,9 @@
                                 <div class="position-relative">
                                     <!--thumbnail img-->
                                     <div class="ratio_right-cover-2 image-wrapper">
-                                        <a href="#">
+                                        <a href="noticia.jsp?id=<%=id7 %>" name="id">
                                             <img class="img-fluid h-25"
-                                                 src="Resources/Convivio.jpg"
+                                                 src="<%=noticia7.getImg()%>"
                                                  alt=""
                                                  width="600"
                                                  height="600">
@@ -309,7 +309,7 @@
                                         <a class="p-1 badge badge-primary rounded-0" href="#"></a>
 
                                         <!--title and description-->
-                                        <a href="#">
+                                        <a href=""noticia.jsp?id=<%=id7 %>" name="id"">
                                             <h2 class="h5 text-white my-1"><%=noticia7.getTitulo() %></h2>
                                         </a>
                                     </div>
