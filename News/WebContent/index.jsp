@@ -21,7 +21,7 @@
 <body>
 
 <% NoticiaService noticiaService = new NoticiaService();
-	ArrayList<Integer> lista = noticiaService.listarIds();	
+	ArrayList<Integer> lista = noticiaService.listarIds();
 	%>
 
 <div class="container">
