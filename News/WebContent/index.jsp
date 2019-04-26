@@ -22,6 +22,7 @@
 
 <% NoticiaService noticiaService = new NoticiaService();
 	ArrayList<Integer> lista = noticiaService.listarIds();	
+	System.out.println(usuario);
 	%>
 
 <div class="container">
@@ -176,7 +177,7 @@
                     </a>
                     <a class="carousel-control-next" href="#featured" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">PrÃ³ximo</span>
+                        <span class="sr-only">Próximo</span>
                     </a>
                 </div>
                 <!--End slider news-->

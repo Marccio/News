@@ -19,7 +19,7 @@ public class ComentarioDAO {
 
 			String sql = "INSERT INTO comentario (id_noticia, email_usuario, texto) VALUES (?,?,?)";
 
-			PreparedStatement ps = this.conexao.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
+			PreparedStatement ps = this.conexao.prepareStatement(sql	);
 
 			ps.setInt(1, comentario.getIdNoticia());
 			ps.setString(2, comentario.getEmail());
@@ -46,7 +46,7 @@ public class ComentarioDAO {
 			if (rs.next()) {
 				Comentario comentario = new Comentario();
 				comentario.setIdNoticia(rs.getInt("id_noticia"));
-				comentario.setEmail(rs.getString("email"));
+				comentario.setEmail(rs.getString("email_usuario"));
 				comentario.setTexto(rs.getString("texto"));
 
 				return comentario;

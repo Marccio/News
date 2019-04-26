@@ -78,8 +78,10 @@
 				<h3 align="center">Comentarios</h3>
 				<br>
 			</div>
-			<%
-				String email = "${usuario.email}";
+			<%String email="";
+			if(usuario!=null){
+				email = usuario.getEmail();
+			}	
 			%>
 			<div align="left">
 
@@ -104,14 +106,10 @@
 					<div class="form-group">
 						<%
 							if (usuario == null) {
-						%>
-						<label for="comentario">
-							<h4>Anônimo</h4>
-						</label><br>
-						<%
+							
 							} else {
 						%>
-						<label for="comentario" name="email"> ${usuario.email}</label><br>
+						<label for="comentario"> ${usuario.email}</label><br>
 						<%
 							}
 						%>
