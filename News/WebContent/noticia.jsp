@@ -71,6 +71,9 @@
 	</div>
 
 	<hr>
+	<div style="text-align:center"><button type="submit" class=" btn btn-primary " style="margin-rigth:15px">Exluir a notica</button>
+	<button type="button" class="btn btn-secondary" data-dismiss="modal" >Editar a noticia</button>
+	</div><br>
 
 	<div>
 		<div class="container-fluid">
@@ -83,7 +86,7 @@
 				email = usuario.getEmail();
 			}	
 			%>
-			<div align="left">
+			<div align="center">
 
 				<%
 					ComentarioService cs = new ComentarioService();
@@ -92,12 +95,11 @@
 						String emailC = comentario.getEmail();
 						String textoC = comentario.getTexto();
 				%>
-				
-				<h4><img src="Resources/avatar.png" alt="avatar" style= "vertical-align:middle; width: 50px; height: 50px ;border-radius: 50%;">  <%=emailC%></h4>
+		
+				<div ><img src="Resources/avatar.png" alt="avatar" style= "vertical-align:middle; width: 50px; height: 50px ;border-radius: 50%; text-aling:center;">  <%=emailC%></div>
 				<br>
 				<p style= "font-size:22">
-					<%=textoC%></p>
-				<br>
+					<%=textoC%></p>	
 				<%
 					}
 				%>
@@ -108,18 +110,13 @@
 							if (usuario == null) { %>
 								<div ><h4 href="#">Faça o login ou cadastre-se para comentar</h4></div><br>
 							
-							<% } else {%>
-						
-						<label class="comentarioAnonimo" for="comentario" > ${usuario.email}</label><br>
-						<%
-							}
-						%>
+							<% }%>
 						<%
 							if (usuario != null) {
 						%>
 						<input type="text" id=comentario name="texto" style="width: 500px"><br>
 						<button type="submit"
-							class=" btn btn-block mybtn btn-primary tx-tfm" name="Comenta">Comenta</button>
+							class=" btn btn-block mybtn btn-primary tx-tfm" name="Comenta" style="width: 500px;text-align:center; margin-top:5px;margin-left:25%;width: 50%;"; >Comenta</button><br>
 						<%
 							}
 						%>
@@ -129,5 +126,6 @@
 			</div>
 		</div>
 	</div>
+
 </body>
 </html>

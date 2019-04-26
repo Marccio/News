@@ -111,8 +111,7 @@
        									 							<p>Tem certeza que deseja excluir?</p>
       														</div>
                                                         <div class="modal-footer ">
-                                                            <button type="submit"
-                                                                class=" btn btn-primary " >Exluir</button>
+                                                            <button type="submit" class=" btn btn-primary " >Exluir</button>
                                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                                         </div>
                                                         	
@@ -127,25 +126,5 @@
                  </div>
              </div>
          </div>
-
-	<script>
-		$(document).ready(function() {
-			$("#mytable #checkall").click(function() {
-				if ($("#mytable #checkall").is(':checked')) {
-					$("#mytable input[type=checkbox]").each(function() {
-						$(this).prop("checked", true);
-					});
-
-				} else {
-					$("#mytable input[type=checkbox]").each(function() {
-						$(this).prop("checked", false);
-					});
-				}
-			});
-
-			$("[data-toggle=tooltip]").tooltip();
-		});
-	</script>
-
 </body>
 </html>
