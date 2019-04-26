@@ -106,7 +106,7 @@
 					<hr>
 						<div style="text-align:center">
 							<button type="buton" class=" btn btn-primary " style="margin-rigth:15px" onclick="">Exlcuir a notica</button>
-							<button type="button" class="btn btn-secondary" data-dismiss="modal" >Editar a noticia</button>
+							<a href="/EditarNoticia.jsp" class="btn btn-secondary" data-dismiss="modal" >Editar a noticia</a>
 						</div><br>
 					<hr>	
 				<%} %>

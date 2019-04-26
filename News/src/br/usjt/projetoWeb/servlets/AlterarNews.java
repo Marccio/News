@@ -45,9 +45,12 @@ public class AlterarNews extends HttpServlet {
 		noticia.setTitulo(request.getParameter("titulo"));
 		noticia.setResumo(request.getParameter("resumo"));
 		noticia.setTexto(request.getParameter("texto"));
+		noticia.setEmail(request.getParameter("email"));
+		noticia.setImg("Resources/Padrao.jpg");
 		
 		noticiaService.alterar(noticia);
 		
+		response.sendRedirect("/EditarNoticia.jsp?id="+idNoticia+"name="+"id");
 	}
 
 }

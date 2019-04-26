@@ -47,7 +47,7 @@
 							
 							<tr>
 								<td><%=id%></td>
-								<td><a style="btn btn-primary"; href="/AlterarNews.java?id=<%=noticia.getIdNoticia()%>" name="id"><%=noticia.getTitulo()%></a></td>
+								<td><a style="btn btn-primary"; href="/AlterarNews.java?idNoticia=<%=noticia.getIdNoticia()%>" name="idNoticia"><%=noticia.getTitulo()%></a></td>
 								<td><%=noticia.getEmail()%></td>
 							</tr>
 							<%
