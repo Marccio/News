@@ -115,7 +115,7 @@ CREATE TABLE comentario(
     ON UPDATE NO ACTION
 )ENGINE = InnoDB;
 
-INSERT INTO comentario(id_noticia, email_usuario, texto) VALUES (1, 'andreialins@gmail.com', 'Que avanço para ciência, um orgulho');
-INSERT INTO comentario(id_noticia, email_usuario, texto) VALUES (1, 'marcioamorosino@hotmail.com', 'É tão importante ver grandes mulheres na ciência!');
+INSERT INTO comentario(id_noticia, email_usuario, texto) VALUES (8, 'andreialins@gmail.com', 'Que avanço para ciência, um orgulho');
+INSERT INTO comentario(id_noticia, email_usuario, texto) VALUES (8, 'marcioamorosino@hotmail.com', 'É tão importante ver grandes mulheres na ciência!');
 INSERT INTO comentario(id_noticia, email_usuario, texto) VALUES (2, 'andreialins@gmail.com', 'A tecnologia colabora, mas o ser humano não quer se ajudar, difícil.');
 

@@ -17,7 +17,7 @@ public class ConnectionFactory {
     public static Connection conectar() throws SQLException {
        
         return DriverManager.getConnection
-                ("jdbc:mysql://127.0.0.1:3306/realNews?useTimezone=true&serverTimezone=UTC", "root", "root");
+                ("jdbc:mysql://127.0.0.1:3306/realNews?useTimezone=true&serverTimezone=UTC", "root", "Marcinho@1998");
        
     }
    

@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
 import br.usjt.projetoWeb.model.Comentario;
 
 public class ComentarioDAO {
@@ -52,7 +54,8 @@ public class ComentarioDAO {
 				return null;
 		} catch (SQLException ex) {
 			ex.printStackTrace();
-		} return null;
+		}
+		return null;
 	}
 
 	public void excluir(int id) {
@@ -83,5 +86,28 @@ public class ComentarioDAO {
 		} catch (SQLException ex) {
 			ex.printStackTrace();
 		}
+	}
+
+	public ArrayList<Comentario> listarComentarios(int idNoticia) {
+		try {
+			this.conexao = ConnectionFactory.conectar();
+			String sql = "SELECT id_noticia,email_usuario,texto FROM comentario WHERE id_noticia=?";
+			PreparedStatement ps = this.conexao.prepareStatement(sql);
+			ps.setInt(1, idNoticia);
+			ResultSet rs = ps.executeQuery();
+			ArrayList<Comentario> lista = new ArrayList<Comentario>();
+			while (rs.next()) {
+				Comentario comentario = new Comentario();
+				comentario.setIdNoticia(rs.getInt("id_noticia"));
+				comentario.setEmail(rs.getString("email_usuario"));
+				comentario.setTexto(rs.getString("texto"));
+
+				lista.add(comentario);
+			}
+			return lista;
+		} catch (SQLException ex) {
+			ex.printStackTrace();
+		}
+		return null;
 	}
 }

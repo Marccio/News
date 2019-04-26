@@ -1,5 +1,7 @@
 package br.usjt.projetoWeb.service;
 
+import java.util.ArrayList;
+
 import br.usjt.projetoWeb.DAO.ComentarioDAO;
 import br.usjt.projetoWeb.model.Comentario;
 
@@ -25,5 +27,9 @@ public class ComentarioService {
 	
 	public void alterar(Comentario comentario) {
 		this.comentarioDAO.alterar(comentario);
+	}
+	
+	public ArrayList<Comentario> listarComentarios(int idNoticia){
+		return this.comentarioDAO.listarComentarios(idNoticia);
 	}
 }
