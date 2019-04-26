@@ -103,13 +103,14 @@
 				%>
 				<form action="CadastroComentario.do?id=<%=id%>&email=<%=email%>"
 					method="post" name="id" name="email">
-					<div class="form-group">
+					<div class="form-group" style="text-align:center">
 						<%
-							if (usuario == null) {
+							if (usuario == null) { %>
+								<div ><h4 href="#">Faça o login ou cadastre-se para comentar</h4></div><br>
 							
-							} else {
-						%>
-						<label for="comentario"> ${usuario.email}</label><br>
+							<% } else {%>
+						
+						<label class="comentarioAnonimo" for="comentario" > ${usuario.email}</label><br>
 						<%
 							}
 						%>

@@ -74,6 +74,13 @@ figure {
   height: 50px;
   border-radius: 50%;
 }
+.comentarioAnonimo{
+	font-size:h4;
+	text-align:center;
+}
+.modal-footer{
+	text-align:center;
+}
 
 
 

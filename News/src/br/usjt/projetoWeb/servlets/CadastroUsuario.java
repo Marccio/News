@@ -19,39 +19,49 @@ import br.usjt.projetoWeb.service.UsuarioService;
 @WebServlet("/CadastroUsuario.do")
 public class CadastroUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public CadastroUsuario() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public CadastroUsuario() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		UsuarioService usuarioService = new UsuarioService();
-		
+
 		String email = request.getParameter("email");
 		String nome = request.getParameter("nomeCompleto");
 		String senha = request.getParameter("senha");
 		String perfil = "Visitante";
-		
-		Usuario usuario = new Usuario(email, nome, senha, perfil);
-		usuarioService.cadastrar(usuario);
-		
-		
-    	response.sendRedirect("index.jsp");
+		Usuario usuarioE = usuarioService.consultar(email);
+		if (usuarioE == null) {
+
+			Usuario usuario = new Usuario(email, nome, senha, perfil);
+			usuarioService.cadastrar(usuario);
+
+			response.sendRedirect("index.jsp?cadastrado=True");
+
+		} else {
+
+			response.sendRedirect("index.jsp?cadastrado=False");
+		}
 	}
 
 }

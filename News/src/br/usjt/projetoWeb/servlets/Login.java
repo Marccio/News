@@ -53,12 +53,11 @@ public class Login extends HttpServlet {
 		if (usuario != null &&
 				usuario.getSenha() != null && senha.equals(usuario.getSenha())) {
 			request.getSession().setAttribute("usuario", usuario);
-        	RequestDispatcher menu = request.getRequestDispatcher("/index.jsp");
-        	menu.forward(request, response);
+			response.sendRedirect("index.jsp?logado=True");
 		} else {
         	request.getSession().invalidate();
-        	RequestDispatcher menu = request.getRequestDispatcher("/index.jsp");
-        	menu.forward(request, response);
+        	response.sendRedirect("index.jsp?logado=False");
+        	
 		}
 	}
 

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ include file="Navbar.jsp"%>
 <%@ page import="br.usjt.projetoWeb.model.Noticia" %>
@@ -327,6 +327,12 @@
             <!--END SECTION-->
         </div>
     </div>
-
+</div>
+<script type="text/javascript">
+    String cadastrado = request.getParameter("cadastrado") ;
+	If (cadastrado.equals("True")){
+		alert("Hello! I am an alert box!!");
+	}
+		</script>
 </body>
 </html>
