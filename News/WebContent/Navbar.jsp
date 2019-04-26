@@ -44,8 +44,8 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="nav navbar-nav ml-auto">
 					<li class="nav-item active"><a class="nav-link">Logado como Administrador</a></li>
-					<li class="nav-item active"><a class="nav-link" href="#">Criar Notícia</a></li>
-					<li class="nav-item active"><a class="nav-link" href="#">Notícias</a></li>
+					<li class="nav-item active"><a class="nav-link" href="#">Criar Noticia</a></li>
+					<li class="nav-item active"><a class="nav-link" href="#">ListarNoticias</a></li>
 					<li class="nav-item active"><a class="nav-link" href="logout.do">Sair</a></li>
 				</ul>
 			</div>
@@ -110,7 +110,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <p class="text-center">
-                                                                Você não tem uma conta? <br>
+                                                                Voc� j� tem uma conta? <br>
                                                                 <a href="#" id="signup" data-toggle="modal" data-target="#cadastroModal" data-dismiss="modal">Cadastre-se agora</a>
                                                             </p>
                                                         </div>
@@ -171,7 +171,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <p class="text-center" style="">
-                                                                VocÃª jÃ¡ tem uma conta? <br>
+                                                                Voc� j� tem uma conta? <br>
                                                                 <a href="#" id="signup" data-toggle="modal" data-target="#loginModal" data-dismiss="modal" >Acesse agora</a>
                                                             </p>
                                                         </div>
