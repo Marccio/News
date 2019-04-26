@@ -10,12 +10,12 @@ public class ComentarioDAO {
 
 	Connection conexao;
 
-	public int cadastrar(Comentario comentario) {
+	public void cadastrar(Comentario comentario) {
 
 		try {
 			this.conexao = ConnectionFactory.conectar();
 
-			String sql = "INSERT INTO comentario (id_noticia, email, texto) VALUES (?,?,?)";
+			String sql = "INSERT INTO comentario (id_noticia, email_usuario, texto) VALUES (?,?,?)";
 
 			PreparedStatement ps = this.conexao.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
 
@@ -25,15 +25,9 @@ public class ComentarioDAO {
 
 			ps.execute();
 
-			ResultSet rs = ps.getGeneratedKeys();
-			if (rs.next()) {
-				int idGerado = rs.getInt(1);
-				return idGerado;
-			}
 		} catch (SQLException ex) {
 			ex.printStackTrace();
 		}
-		return -1;
 	}
 
 	public Comentario consultar(int id) {

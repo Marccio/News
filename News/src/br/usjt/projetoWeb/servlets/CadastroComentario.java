@@ -3,6 +3,7 @@ package br.usjt.projetoWeb.servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -44,21 +45,18 @@ public class CadastroComentario extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		ComentarioService comentarioService = new ComentarioService();
-
 		String email = request.getParameter("email");
 		String texto = request.getParameter("texto");
-		int idNoticia = Integer.parseInt(request.getParameter("idNoticia"));
-
-		Comentario comentario = new Comentario(idNoticia, email, texto);
-		int idComentario = comentarioService.cadastrar(comentario);
 		
-		if(idComentario!=-1) {
-			PrintWriter pw = response.getWriter();
-			pw.println("");// alert "cadastrado com sucesso"
-		}
+		System.out.println(email);
+		System.out.println(texto);
 		
-		// usar id p fzr consulta e mostrar o comentario
-		// redirecionar p proxima pagina
+		Comentario comentario = new Comentario(Integer.parseInt(request.getParameter("id")), email, texto);
+		comentarioService.cadastrar(comentario);
+		
+		RequestDispatcher menu = request.getRequestDispatcher("/index.jsp");
+    	menu.forward(request, response);
+		
 	}
 
 }

@@ -58,7 +58,7 @@
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
                                             <a href="noticia.jsp?id=<%=id %>" name="id">
-                                                <img class="img-fluid w-100 h-50"
+                                                <img class="img-fluid w-110 h-75"
                                                      src="<%=noticia.getImg()%>"
                                                      alt="">
                                             </a>
@@ -87,7 +87,7 @@
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
                                             <a href="noticia.jsp?id=<%=id1 %>" name="id">
-                                                <img class="img-fluid w-100 h-50"
+                                                <img class="img-fluid w-110 h-75"
                                                      src="<%=noticia1.getImg()%>"
                                                      alt="">
                                             </a>
@@ -116,7 +116,7 @@
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
                                             <a href="noticia.jsp?id=<%=id2 %>" name="id">
-                                                <img class="img-fluid w-100 h-50"
+                                                <img class="img-fluid w-110 h-75"
                                                      src="<%=noticia2.getImg()%>"
                                                      alt="">
                                             </a>
@@ -147,7 +147,7 @@
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
                                             <a href="noticia.jsp?id=<%=id3 %>" name="id">
-                                                <img class="img-fluid w-100 h-50"
+                                                <img class="img-fluid w-110 h-75"
                                                      src="<%=noticia3.getImg()%>"
                                                      alt="">
                                             </a>
@@ -176,7 +176,7 @@
                     </a>
                     <a class="carousel-control-next" href="#featured" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Próximo</span>
+                        <span class="sr-only">PrÃ³ximo</span>
                     </a>
                 </div>
                 <!--End slider news-->
@@ -188,14 +188,14 @@
                 <div class="col-12 col-md-6 pt-2 pl-md-1 mb-3 mb-lg-4">
                     <div class="row">
                         <!--news box-->
-                        <div class="col-6 pb-1 pt-0 pr-1">
+                        <div class="col-6 pb-1 pt-0 pr-1" id="imagens">
                             <div class="card border-0 rounded-0 text-white overflow zoom">
                                 <!--thumbnail-->
                                 <div class="position-relative">
                                     <!--thumbnail img-->
                                     <div class="ratio_right-cover-2 image-wrapper">
                                         <a href="noticia.jsp?id=<%=id4 %>" name="id">
-                                            <img class="img-fluid h-25"
+                                            <img class="img-fluid h-50"
                                                  src="<%=noticia4.getImg()%>"
                                                  alt="">
                                         </a>
@@ -326,6 +326,7 @@
             <!--END SECTION-->
         </div>
     </div>
+</div>
 
 </body>
 </html>
