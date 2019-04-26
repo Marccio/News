@@ -18,7 +18,7 @@ public class NoticiaDAO {
 		try {
 			this.conexao = ConnectionFactory.conectar();
 
-			String sql = "INSERT INTO noticia (titulo, resumo, texto, email_Usuario, img) VALUES (?, ?, ?,?,?)";
+			String sql = "INSERT INTO noticia (titulo, resumo, texto, email_Usuario, img) VALUES (?, ?, ?, ?, ?)";
 
 			PreparedStatement ps = this.conexao.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
 
