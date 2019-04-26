@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="UTF-8"%>
 <%@ page import="br.usjt.projetoWeb.model.Usuario"%>
 
 <head>
@@ -19,7 +19,7 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+	<nav class="navbar navbar-dark bg-primary"">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="index.jsp"><h1>RealNews</h1></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -44,8 +44,8 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="nav navbar-nav ml-auto">
 					<li class="nav-item active"><a class="nav-link">Logado como Administrador</a></li>
-					<li class="nav-item active"><a class="nav-link" href="#">Criar Notícia</a></li>
-					<li class="nav-item active"><a class="nav-link" href="#">Notícias</a></li>
+					<li class="nav-item active"><a class="nav-link" href="#">Criar NotÃ­cia</a></li>
+					<li class="nav-item active"><a class="nav-link" href="#">NotÃ­cias</a></li>
 					<li class="nav-item active"><a class="nav-link" href="logout.do">Sair</a></li>
 				</ul>
 			</div>
@@ -110,7 +110,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <p class="text-center">
-                                                                Você não tem uma conta? <br>
+                                                                VocÃª nÃ£o tem uma conta? <br>
                                                                 <a href="#" id="signup" data-toggle="modal" data-target="#cadastroModal" data-dismiss="modal">Cadastre-se agora</a>
                                                             </p>
                                                         </div>
@@ -171,7 +171,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <p class="text-center" style="">
-                                                                Você já tem uma conta? <br>
+                                                                VocÃª jÃ¡ tem uma conta? <br>
                                                                 <a href="#" id="signup" data-toggle="modal" data-target="#loginModal" data-dismiss="modal" >Acesse agora</a>
                                                             </p>
                                                         </div>
