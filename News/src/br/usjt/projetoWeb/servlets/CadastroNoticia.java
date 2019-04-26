@@ -13,14 +13,14 @@ import br.usjt.projetoWeb.service.NoticiaService;
 /**
  * Servlet implementation class CadastroNews
  */
-@WebServlet("/CadastroNews.do")
-public class CadastroNews extends HttpServlet {
+@WebServlet("/CadastroNoticia.do")
+public class CadastroNoticia extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CadastroNews() {
+    public CadastroNoticia() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -42,11 +42,13 @@ public class CadastroNews extends HttpServlet {
 		String titulo = request.getParameter("titulo");
 		String resumo = request.getParameter("resumo");
 		String texto = request.getParameter("texto");
+		String email = request.getParameter("email");
 		
-		Noticia noticia = new Noticia(titulo, resumo, texto);
-		int IdNoticia = noticiaService.cadastrar(noticia);
+		Noticia noticia = new Noticia(titulo, resumo, texto, email, "Resources/Padrao.jpg");
+		noticiaService.cadastrar(noticia);
 		
-		
+			response.sendRedirect("index.jsp");
+		 
 	}
 
 }
