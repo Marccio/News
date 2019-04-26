@@ -15,11 +15,9 @@
 	<link rel="stylesheet" type="text/css" href="Resources/css/style.css">
 </head>
 <body>
-<%
-	int id = (int) Integer.parseInt(request.getParameter("id"));
-	NoticiaService ns = new NoticiaService();
-	Noticia noticia = ns.consultar(id);
-	%>
+	<%	int id = (int) Integer.parseInt(request.getParameter("id"));
+		NoticiaService ns = new NoticiaService();
+		Noticia noticia = ns.consultar(id);  %>
 
 <div class="container-fluid padding">
     <div class="row text-center">
@@ -66,7 +64,7 @@
 			
 	<%} %>
 		<input type="text" id=comentario style=width:500px><br>
-		<input type="button" class=" btn btn-block mybtn btn-primary tx-tfm" name="btnComentar" value="Comentar">
+		<input type="button" class=" btn btn-block mybtn btn-primary tx-tfm" name="btnComentar" value="Comentar" style="width:100px">
 	</div>
 	
 	
