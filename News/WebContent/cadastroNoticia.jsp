@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Real News here</title>
+<title>Real News</title>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -32,15 +32,15 @@
 									<div class="col-md-12">
 										<div class="form-group">
 											<input type="text" class="form-control" placeholder="Titulo"
-												required />
+												required name="titulo" />
 										</div>
 										<div class="form-group">
 											<textarea class="form-control" placeholder="Resumo" rows="3"
-												required></textarea>
+												required name="resumo"></textarea>
 										</div>
 										<div class="form-group">
 											<textarea class="form-control" placeholder="Texto" rows="7"
-												required></textarea>
+												required name="texto"></textarea>
 										</div>
 										<div class="col-md-12 text-center ">
 											<button type="submit"

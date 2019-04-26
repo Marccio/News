@@ -46,8 +46,7 @@ public class CadastroNews extends HttpServlet {
 		Noticia noticia = new Noticia(titulo, resumo, texto);
 		int IdNoticia = noticiaService.cadastrar(noticia);
 		
-		// usar id p fazer consultar da noticia e colocar na pagina index
-		//redirecionar p proxima pagina 
+		
 	}
 
 }
