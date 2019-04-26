@@ -71,9 +71,7 @@
 	</div>
 
 	<hr>
-	<div style="text-align:center"><button type="submit" class=" btn btn-primary " style="margin-rigth:15px">Exluir a notica</button>
-	<button type="button" class="btn btn-secondary" data-dismiss="modal" >Editar a noticia</button>
-	</div><br>
+
 
 	<div>
 		<div class="container-fluid">
@@ -98,25 +96,37 @@
 		
 				<div ><img src="Resources/avatar.png" alt="avatar" style= "vertical-align:middle; width: 50px; height: 50px ;border-radius: 50%; text-aling:center;">  <%=emailC%></div>
 				<br>
-				<p style= "font-size:22">
-					<%=textoC%></p>	
+				<p style= "font-size:22"><%=textoC%></p>
 				<%
 					}
 				%>
+				<hr>
+				
+				<%if(usuario !=null && usuario.getPerfil().toLowerCase().equals("administrador")){ %>
+					<hr>
+						<div style="text-align:center">
+							<button type="buton" class=" btn btn-primary " style="margin-rigth:15px" onclick="">Exlcuir a notica</button>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal" >Editar a noticia</button>
+						</div><br>
+					<hr>	
+				<%} %>
+							
 				<form action="CadastroComentario.do?id=<%=id%>&email=<%=email%>"
 					method="post" name="id" name="email">
 					<div class="form-group" style="text-align:center">
-						<%
-							if (usuario == null) { %>
+						<%	if (usuario == null) { %>
+							<hr>
 								<div ><h4 href="#">Faça o login ou cadastre-se para comentar</h4></div><br>
 							
 							<% }%>
+							
 						<%
 							if (usuario != null) {
 						%>
+						<div ><img src="Resources/avatar.png" alt="avatar" style= "vertical-align:middle; width: 50px; height: 50px ;border-radius: 50%; text-aling:center;">  <%= usuario.getEmail()%></div>
 						<input type="text" id=comentario name="texto" style="width: 500px"><br>
 						<button type="submit"
-							class=" btn btn-block mybtn btn-primary tx-tfm" name="Comenta" style="width: 500px;text-align:center; margin-top:5px;margin-left:25%;width: 50%;"; >Comenta</button><br>
+							class=" btn btn-block mybtn btn-primary tx-tfm" name="Comenta" style="width: 500px;text-align:center; margin-top:5px;margin-left:25%;width: 50%;" >Comenta</button><br>
 						<%
 							}
 						%>

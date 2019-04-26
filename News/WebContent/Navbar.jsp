@@ -111,7 +111,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <p class="text-center">
-                                                                VocÃª jÃ¡ tem uma conta? <br>
+                                                                Você já tem uma conta? <br>
                                                                 <a href="#" id="signup" data-toggle="modal" data-target="#cadastroModal" data-dismiss="modal">Cadastre-se agora</a>
                                                             </p>
                                                         </div>
