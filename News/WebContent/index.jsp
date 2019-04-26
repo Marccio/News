@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ include file="Navbar.jsp"%>
+<%@ page import="br.usjt.projetoWeb.model.Noticia" %>
+<%@ page import="br.usjt.projetoWeb.service.NoticiaService"%>
+<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +19,10 @@
     
 </head>
 <body>
+
+<% NoticiaService noticiaService = new NoticiaService();
+	ArrayList<Integer> lista = noticiaService.listarIds();	
+	%>
 
 <div class="container">
     <div class="row mb-2">
@@ -41,6 +48,9 @@
                         <!--carousel inner-->
                         <div class="carousel-inner">
                             <!--Item slider-->
+                            <%  int id = (int)lista.get(0);
+                            Noticia noticia = noticiaService.consultar(id); 
+                            String img = noticia.getImg();%>
                             <div class="carousel-item active">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
                                     <!--thumbnail-->
@@ -50,16 +60,14 @@
                                             <a href="noticia.jsp">
                                                 <img class="img-fluid w-100 h-50"
                                                      src="Resources/blackhole.jpg"
-                                                     alt=""
-                                                     >
+                                                     alt="">
                                             </a>
                                         </div>
-                                        
                                         <!--title-->
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                             <!--title and description-->
                                             <a href="noticia.jsp">
-                                                <h2 class="h3 post-title text-white my-1">Primeira imagem do buraco negro</h2>
+                                                <h2 class="h3 post-title text-white my-1"><%=noticia.getTitulo() %></h2>
                                             </a>
                                             
                                         </div>
@@ -68,7 +76,9 @@
                                     <!--end thumbnail-->
                                 </div>
                             </div>
-                            
+                            <%  int id1 = (int)lista.get(1);
+                            Noticia noticia1 = noticiaService.consultar(id1); 
+                            String img1 = noticia.getImg();%>
                             <!--Item slider-->
                             <div class="carousel-item">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
@@ -87,7 +97,7 @@
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                             <!--title and description-->
                                             <a href="#">
-                                                <h2 class="h3 post-title text-white my-1">Como a tecnologia está revolucionando a indústria da saúde</h2>
+                                                <h2 class="h3 post-title text-white my-1"><%=noticia1.getTitulo() %></h2>
                                             </a>
                                         </div>
                                         <!--end title-->
@@ -95,7 +105,9 @@
                                     <!--end thumbnail-->
                                 </div>
                             </div>
-                            
+                            <%  int id2 = (int)lista.get(2);
+                            Noticia noticia2 = noticiaService.consultar(id2); 
+                            String img2 = noticia.getImg();%>
                             <!--Item slider-->
                             <div class="carousel-item">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
@@ -114,7 +126,7 @@
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                             <!--title and description-->
                                             <a href="#">
-                                                <h2 class="h3 post-title text-white my-1">Joe Biden anuncia pré-candidatura à presidência dos EUA</h2>
+                                                <h2 class="h3 post-title text-white my-1"><%=noticia2.getTitulo() %></h2>
                                             </a>
 
                                             <!-- meta title -->
@@ -124,7 +136,9 @@
                                     <!--end thumbnail-->
                                 </div>
                             </div>
-                            
+                            <%  int id3 = (int)lista.get(3);
+                            Noticia noticia3 = noticiaService.consultar(id3); 
+                            String img3 = noticia.getImg();%>
                             <!--Item slider-->
                             <div class="carousel-item">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
@@ -143,7 +157,7 @@
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                             <!--title and description-->
                                             <a href="#">
-                                                <h2 class="h3 post-title text-white my-1">Mala de mão fora do padrão começa a ser despachada em aeroportos</h2>
+                                                <h2 class="h3 post-title text-white my-1"><%=noticia3.getTitulo() %></h2>
                                             </a>
                                         </div>
                                         <!--end title-->
@@ -168,6 +182,9 @@
                 <!--End slider news-->
                 
                 <!--Start box news-->
+                <%  int id4 = (int)lista.get(4);
+                    Noticia noticia4 = noticiaService.consultar(id4); 
+                    String img4 = noticia.getImg();%>
                 <div class="col-12 col-md-6 pt-2 pl-md-1 mb-3 mb-lg-4">
                     <div class="row">
                         <!--news box-->
@@ -191,7 +208,7 @@
 
                                         <!--title and description-->
                                         <a href="#">
-                                            <h2 class="h5 text-white my-1">Fãs de Microsoft Paint comemoram decisão da empresa de manter programa no Windows</h2>
+                                            <h2 class="h5 text-white my-1"><%=noticia4.getTitulo() %></h2>
                                         </a>
                                     </div>
                                     <!--end title-->
@@ -199,7 +216,9 @@
                                 <!--end thumbnail-->
                             </div>
                         </div>
-                        
+                        <%  int id5 = (int)lista.get(5);
+                            Noticia noticia5 = noticiaService.consultar(id5); 
+                            String img5 = noticia.getImg();%>
                         <!--news box-->
                         <div class="col-6 pb-1 pl-1 pt-0">
                             <div class="card border-0 rounded-0 text-white overflow zoom">
@@ -223,7 +242,7 @@
 
                                         <!--title and description-->
                                         <a href="#">
-                                            <h2 class="h5 text-white my-1">Notre-Dame: primeiro alerta de fogo teria falhado por erro humano</h2>
+                                            <h2 class="h5 text-white my-1"><%=noticia5.getTitulo() %></h2>
                                         </a>
                                     </div>
                                     <!--end title-->
@@ -231,7 +250,9 @@
                                 <!--end thumbnail-->
                             </div>
                         </div>
-                        
+                        <%  int id6 = (int)lista.get(6);
+                            Noticia noticia6 = noticiaService.consultar(id6); 
+                            String img6 = noticia.getImg();%>
                         <!--news box-->
                         <div class="col-6 pb-1 pr-1 pt-1">
                             <div class="card border-0 rounded-0 text-white overflow zoom">
@@ -255,7 +276,7 @@
 
                                         <!--title and description-->
                                         <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                            <h2 class="h5 text-white my-1">"Como sou cirurgiã de câncer de mama, pensei que não aconteceria comigo"</h2>
+                                            <h2 class="h5 text-white my-1"><%=noticia6.getTitulo() %></h2>
                                         </a>
                                     </div>
                                     <!--end title-->
@@ -263,7 +284,9 @@
                                 <!--end thumbnail-->
                             </div>
                         </div>
-                        
+                        <%  int id7 = (int)lista.get(7);
+                            Noticia noticia7 = noticiaService.consultar(id7); 
+                            String img7 = noticia.getImg();%>
                         <!--news box-->
                         <div class="col-6 pb-1 pl-1 pt-1">
                             <div class="card border-0 rounded-0 text-white overflow zoom">
@@ -287,7 +310,7 @@
 
                                         <!--title and description-->
                                         <a href="#">
-                                            <h2 class="h5 text-white my-1">Produtos para estimular o convívio entre gerações</h2>
+                                            <h2 class="h5 text-white my-1"><%=noticia7.getTitulo() %></h2>
                                         </a>
                                     </div>
                                     <!--end title-->

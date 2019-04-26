@@ -29,8 +29,8 @@ public class NoticiaService {
 		this.noticiaDAO.alterar(noticia);
 	}
 	
-	public ArrayList<Integer> listarNoticias(){
-		return this.noticiaDAO.listarNoticias();
+	public ArrayList<Integer> listarIds(){
+		return this.noticiaDAO.listarIds();
 	}
 	
 	public ArrayList<Integer> buscarNoticias(String titulo){

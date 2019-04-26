@@ -33,15 +33,6 @@ CREATE TABLE noticia(
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 )ENGINE = InnoDB;
-
-INSERT INTO noticia(titulo, resumo, texto, email_Usuario, img) VALUES ('Primeira imagem do buraco negro',
-'Visualizar um buraco negro era o sonho de muitos físicos. Ele foi finalmente realizado pela equipe de 200 cientistas do projeto Event Horizon Telescope (EHT), que divulgou imagens de um buraco negro pela primeira vez na história na quarta-feira (10).',
- 'Desde o início das observações no projeto até a publicação dos resultados, foram dois anos de muito trabalho. 
- A sincronização de oito telescópios produziu a imagem tão esperada do buraco negro na galáxia M87.
-Antes disso, cientistas vinham estudando buracos negros pelo menos desde o século 18. Há cerca de duas décadas chegaram à conclusão de que seria possível obter uma imagem do círculo de luz, ou da sombra do buraco negro, por meio de radiotelescópios.
-Muitas simulações e imagens computadorizadas foram produzidas pelos estudiosos e várias delas foram publicadas com a primeira foto do buraco negro. 
-A imagem do anel de luz em torno de um ponto escuro no universo despertou a curiosidade de muita gente.', 
- 'vitoriapaulafofa@ig.com.br','Resources/blackhole.jpg');
     
 INSERT INTO noticia(titulo, resumo, texto, email_Usuario, img) VALUES ('Como a tecnologia está revolucionando a indústria da saúde',
 'As gigantes de tecnologia e as healthtechs promovem transformações profundas em um setor tradicionalmente avesso a mudanças',
@@ -93,6 +84,21 @@ INSERT INTO noticia(titulo, resumo, texto, email_Usuario, img) VALUES ('Produtos
 'O Centro de Longevidade da Universidade de Stanford, na Califórnia, anunciou no dia 16 de abril os vencedores da sexta edição do “Desafio do design” (“Design Challenge”), prêmio voltado para que estudantes criem produtos e serviços que beneficiem todos os aspectos relativos à longevidade. Adoraria que algo semelhante fosse encampado pelo meio acadêmico brasileiro, que ainda está longe de abraçar a causa da intergeracionalidade. Os jovens que estão na universidade ignoram que vão trabalhar num Brasil envelhecido e não têm ideia de como se relacionar com os idosos, um grupo de consumidores que só vem crescendo.Por falar em estimular a convivência entre gerações, esse era exatamente o desafio deste ano. Excepcionalmente, os jurados decidiram que duas equipes deveriam dividir o primeiro lugar, e cada uma receberá dez mil dólares (o equivalente a 40 mil reais). Os projetos empatados chamam-se “Então você acha que conhece sua avó?” (“So you think you know your grandma?”), criado por alunos da Universidade da Califórnia de Berkeley; e “Sala da família” (“Family room”), de Stanford. O terceiro prêmio, no valor de dois mil dólares, foi para “Guerra de travesseiros” (“Pillow fight!”), da YuanZe University, de Taiwan.
 “Então você acha que conhece sua avó?” é um jogo de cartas criado para derrubar estereótipos que envolvem os velhos: afinal, a maioria dos netos não imagina as aventuras que pontuaram o passado de seus avós. O objetivo do aplicativo “Sala da família” é registrar e compartilhar as histórias dos idosos através de registros sonoros que utilizam um sistema tecnológico simples, mas de qualidade. Por último, a “Guerra de travesseiros” é uma plataforma de videogames para avós e netos: : almofadas são transformadas em controles dos jogos, usando diversão para aproximar gerações.',
 'marcioamorosino@hotmail.com','Resources/Convivio.jpg');
+
+INSERT INTO noticia(titulo, resumo, texto, email_Usuario, img) VALUES ('Primeira imagem do buraco negro',
+'Visualizar um buraco negro era o sonho de muitos físicos. Ele foi finalmente realizado pela equipe de 200 cientistas do projeto Event Horizon Telescope (EHT), que divulgou imagens de um buraco negro pela primeira vez na história na quarta-feira (10).',
+ 'Desde o início das observações no projeto até a publicação dos resultados, foram dois anos de muito trabalho. 
+ A sincronização de oito telescópios produziu a imagem tão esperada do buraco negro na galáxia M87.
+Antes disso, cientistas vinham estudando buracos negros pelo menos desde o século 18. Há cerca de duas décadas chegaram à conclusão de que seria possível obter uma imagem do círculo de luz, ou da sombra do buraco negro, por meio de radiotelescópios.
+Muitas simulações e imagens computadorizadas foram produzidas pelos estudiosos e várias delas foram publicadas com a primeira foto do buraco negro. 
+A imagem do anel de luz em torno de um ponto escuro no universo despertou a curiosidade de muita gente.', 
+ 'vitoriapaulafofa@ig.com.br','Resources/blackhole.jpg');
+
+INSERT INTO noticia(titulo, resumo, texto, email_Usuario, img) VALUES ('As empresas tradicionais não têm respostas para competir com a Xiaomi no Brasil','Samsung e Motorola, que dominaram o mercado brasileiro de celulares por muitos anos não se mostram capazes de reagir',
+'Nesta quarta-feira, 24, a Samsung anunciou a chegada ao Brasil de três celulares da família Galaxy M: o M10, o M20 e o M30. Os três dispositivos são razoavelmente simples, com preços oscilando entre R$ 900 e R$ 1.500 dependendo da versão escolhida.A situação é curiosa diante de um mercado que foi inundado, ainda que informalmente, pela Xiaomi, que tem chamado a atenção de basicamente qualquer brasileiro que esteja de olho em um celular novo. Os três aparelhos da Samsung podem até ser baratos, mas o fantasma da chinesa assombra basicamente qualquer lançamento realizado no Brasil.
+Vamos olhar, por exemplo, o celular mais barato do trio, o M10. O dispositivo conta com 3 GB de memória RAM com câmera dupla e uma tela grande de 6,2 polegadas, 32 GB de armazenamento interno. Não são especificações ruins quando pensamos que se trata de um aparelho de R$ 900, completamente dentro da realidade brasileira.
+E então nós vamos olhar o que oferecem os aparelhos chineses que estão entrando no mercado oferecem pelo mesmo preço. Temos dispositivos como o Redmi Note 6 Pro e o Mi A2, que podem ser encontrados por cerca de pouco mais de R$ 100 a mais, mas com capacidades consideravelmente superiores. Ambos com 4 GB de RAM, tela com resolução muito superior (Full HD+ contra HD+) e processador superior.
+Isso também vale para o Galaxy M20, que é só um pouco melhor. Ele se iguala em preço aos modelos destacados e em várias das especificações, mas fica bastante para trás em desempenho: uma comparação rápida no AnTuTu mostra uma diferença considerável de 30 mil pontos entre um Mi A2, por exemplo, e o M20 da Samsung.','vitoriapaulafofa@ig.com.br','Resources/Xiaomi.jpg');
 
 DROP TABLE IF EXISTS comentario;
 CREATE TABLE comentario(

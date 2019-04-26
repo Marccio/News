@@ -100,6 +100,7 @@ public class NoticiaDAO {
 	
 	public ArrayList<Integer> buscarNoticia(String titulo){
 		try {
+			this.conexao = ConnectionFactory.conectar();
 			String sql = "SELECT id FROM noticia WHERE ucase(titulo) LIKE '%?%'";
 			PreparedStatement ps = this.conexao.prepareStatement(sql);
 			
@@ -117,8 +118,21 @@ public class NoticiaDAO {
 		return null;
 	}
 	
-	public ArrayList<Integer> listarNoticias() {
-		return repositorio;
-		
+	public ArrayList<Integer> listarIds() {
+		try {
+			this.conexao = ConnectionFactory.conectar();
+			String sql = "SELECT id FROM noticia ORDER BY id DESC LIMIT 8";
+			PreparedStatement ps = this.conexao.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			ArrayList<Integer> lista = new ArrayList<Integer>();
+			while(rs.next()) {
+				lista.add(rs.getInt("id"));
+			}
+			return lista;
+			
+		} catch (SQLException ex) {
+			ex.printStackTrace();
+		}
+		return null;
 	}
 }
