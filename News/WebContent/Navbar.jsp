@@ -40,12 +40,13 @@
 			<%
 				} else {
 					if (usuario.getPerfil().toLowerCase().equals("administrador")) {
+						String email = usuario.getEmail();
 			%>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="nav navbar-nav ml-auto">
 					<li class="nav-item active"><a class="nav-link">Logado como Administrador</a></li>
-					<li class="nav-item active"><a class="nav-link" href="#">Criar Noticia</a></li>
-					<li class="nav-item active"><a class="nav-link" href="#">ListarNoticias</a></li>
+					<li class="nav-item active"><a class="nav-link" href="cadastroNoticia.jsp" >Criar Noticia</a></li>
+					<li class="nav-item active"><a class="nav-link" href="listarNoticias.jsp">Listar Noticias</a></li>
 					<li class="nav-item active"><a class="nav-link" href="logout.do">Sair</a></li>
 				</ul>
 			</div>
@@ -110,7 +111,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <p class="text-center">
-                                                                Você já tem uma conta? <br>
+                                                                VocÃª jÃ¡ tem uma conta? <br>
                                                                 <a href="#" id="signup" data-toggle="modal" data-target="#cadastroModal" data-dismiss="modal">Cadastre-se agora</a>
                                                             </p>
                                                         </div>
@@ -144,7 +145,7 @@
                                                     <form action="CadastroUsuario.do" method="post" name="Cadastro">
 														<div class="form-group">
                                                             <label for="inputName" style="width: 50%;text-align:center;margin-left:25%;">Nome Completo</label> <input
-                                                                type="name" name="nomeCompleto" class="form-control" id="nameC"
+                                                                type="text" name="nomeCompleto" class="form-control" id="nameC"
                                                                 aria-describedby="emailHelp" placeholder="Nome" style="width:300px;margin-left:15%;"  >
                                                         </div>
                                                         <div class="form-group">
@@ -171,7 +172,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <p class="text-center" style="">
-                                                                Você já tem uma conta? <br>
+                                                                VocÃª jÃ¡ tem uma conta? <br>
                                                                 <a href="#" id="signup" data-toggle="modal" data-target="#loginModal" data-dismiss="modal" >Acesse agora</a>
                                                             </p>
                                                         </div>
