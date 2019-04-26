@@ -100,7 +100,7 @@
                                                         </div>
                                                         <div class="col-md-12 text-center ">
                                                             <button type="submit"
-                                                                class=" btn btn-block mybtn btn-primary tx-tfm" style="margin-left:25%;width: 50%;">Login</button>
+                                                                class=" btn btn-block mybtn btn-primary tx-tfm" style="margin-left:25%;width: 50%;" onclick="<%=response.sendRedirect("index.jsp") %>">Login</button>
                                                         </div>
                                                         <div class="col-md-12 ">
                                                                 <div class="login-or">

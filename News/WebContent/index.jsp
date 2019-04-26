@@ -57,7 +57,7 @@
                                     <div class="position-relative">
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
-                                            <a href="noticia.jsp">
+                                            <a href="noticia.jsp?id=<%=id %>" name="id">
                                                 <img class="img-fluid w-100 h-50"
                                                      src="Resources/blackhole.jpg"
                                                      alt="">

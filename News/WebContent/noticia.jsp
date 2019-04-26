@@ -15,14 +15,16 @@
 	<link rel="stylesheet" type="text/css" href="Resources/css/style.css">
 </head>
 <body>
-<%NoticiaService ns = new NoticiaService();
-	Noticia noticia = ns.consultar(1);
+<%
+	int id = (int) Integer.parseInt(request.getParameter("id"));
+	NoticiaService ns = new NoticiaService();
+	Noticia noticia = ns.consultar(id);
 	%>
 
 <div class="container-fluid padding">
     <div class="row text-center">
         <div class="col-12">
-            <h1 class="display-4"><u><%=noticia.getTitulo() %></u></h1><br>
+            <h1 class="display-4"><%=noticia.getTitulo()%></h1><br>
         </div>
         <hr/>
     </div>
