@@ -18,10 +18,12 @@ public class Noticia {
 		this.img = img;
 	}
 	
-	public Noticia(String titulo, String resumo, String texto) {
+	public Noticia(String titulo, String resumo, String texto, String email, String img) {
 		this.titulo = titulo;
 		this.resumo = resumo;
 		this.texto = texto;
+		this.email = email;
+		this.img = img;
 	}
 
 	public String getImg() {
