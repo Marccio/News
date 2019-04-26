@@ -48,9 +48,6 @@ public class CadastroComentario extends HttpServlet {
 		String email = request.getParameter("email");
 		String texto = request.getParameter("texto");
 		
-		System.out.println(email);
-		System.out.println(texto);
-		
 		Comentario comentario = new Comentario(Integer.parseInt(request.getParameter("id")), email, texto);
 		comentarioService.cadastrar(comentario);
 		
