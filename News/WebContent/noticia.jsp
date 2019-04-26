@@ -56,7 +56,7 @@
 	</div>	
 	<%String email = usuario.getEmail(); %>
 	<div align="center" >
-<<<<<<< HEAD
+
 	<form action="CadastroComentario.do?id=<%=id%>&email=<%=email%>" method="post" name="id" name="email">
 		<div class="form-group">
 			<%if(usuario == null){%>
@@ -72,7 +72,7 @@
 			<%} %>
 		</div>
 	</form>	
-=======
+
 	<%if(usuario == null){%>
 		<label for="comentario" >
 		<h4>Anonimo</h4></label><br>		
@@ -83,7 +83,7 @@
 	<%} %>
 		<input type="text" id=comentario style=width:500px><br>
 		<input type="button" class=" btn btn-block mybtn btn-primary tx-tfm" name="btnComentar" value="Comentar" style="width:100px">
->>>>>>> 2526bdacf70248ebdf697917df02aba1c0088dda
+
 	</div>
 
 </body>
