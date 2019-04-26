@@ -19,7 +19,7 @@
 
 </head>
 <body>
-	<nav class="navbar sticky-top navbar-dark bg-primary ">
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="index.jsp"><h1>RealNews</h1></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
