@@ -3,17 +3,18 @@ package br.usjt.projetoWeb.model;
 public class Noticia {
 	
 	private int idNoticia;
-	private String titulo, resumo, texto, img;
+	private String titulo, resumo, texto, email, img;
 	
 	public Noticia() {
 		
 	}
 	
-	public Noticia(int idNoticia, String titulo, String resumo, String texto, String img) {
+	public Noticia(int idNoticia, String titulo, String resumo, String texto, String email, String img) {
 		this.idNoticia = idNoticia;
 		this.titulo = titulo;
 		this.resumo = resumo;
 		this.texto = texto;
+		this.email = email;
 		this.img = img;
 	}
 	
@@ -63,5 +64,12 @@ public class Noticia {
 		this.texto = texto;
 	}
 	
+	public String getEmail() {
+		return email;
+	}
+	
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	
 }
