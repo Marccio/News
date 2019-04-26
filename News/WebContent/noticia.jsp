@@ -54,7 +54,25 @@
 	<div>
 		<h3 align="center"> Comentarios </h3><br>
 	</div>	
+	<%String email = usuario.getEmail(); %>
 	<div align="center" >
+<<<<<<< HEAD
+	<form action="CadastroComentario.do?id=<%=id%>&email=<%=email%>" method="post" name="id" name="email">
+		<div class="form-group">
+			<%if(usuario == null){%>
+			<label for="comentario" >
+			<h4>Anônimo</h4></label><br>
+			<% }else{%>
+			<label for="comentario" name="email">
+			${usuario.email}</label><br>
+			<%} %>
+			<%if(usuario!=null){ %>
+			<input type="text" id=comentario name="texto" style=width:500px><br>
+			<button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm" name="Comenta">Comenta</button>
+			<%} %>
+		</div>
+	</form>	
+=======
 	<%if(usuario == null){%>
 		<label for="comentario" >
 		<h4>Anonimo</h4></label><br>		
@@ -65,12 +83,8 @@
 	<%} %>
 		<input type="text" id=comentario style=width:500px><br>
 		<input type="button" class=" btn btn-block mybtn btn-primary tx-tfm" name="btnComentar" value="Comentar" style="width:100px">
+>>>>>>> 2526bdacf70248ebdf697917df02aba1c0088dda
 	</div>
-	
-	
-</div>
-
-</div>
 
 </body>
 </html>
