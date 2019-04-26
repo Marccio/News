@@ -58,7 +58,7 @@
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
                                             <a href="noticia.jsp?id=<%=id %>" name="id">
-                                                <img class="img-fluid h-75"
+                                                <img class="img-fluid h-50"
                                                      src="<%=noticia.getImg()%>"
                                                      alt=""
                                                      style="">
@@ -88,7 +88,7 @@
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
                                             <a href="noticia.jsp?id=<%=id1 %>" name="id">
-                                                <img class="img-fluid h-75"
+                                                <img class="img-fluid h-50"
                                                      src="<%=noticia1.getImg()%>"
                                                      alt="">
                                             </a>
@@ -117,7 +117,7 @@
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
                                             <a href="noticia.jsp?id=<%=id2 %>" name="id">
-                                                <img class="img-fluid h-75"
+                                                <img class="img-fluid h-50"
                                                      src="<%=noticia2.getImg()%>"
                                                      alt="">
                                             </a>
@@ -148,7 +148,7 @@
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
                                             <a href="noticia.jsp?id=<%=id3 %>" name="id">
-                                                <img class="img-fluid w-110 h-75"
+                                                <img class="img-fluid w-110 h-50"
                                                      src="<%=noticia3.getImg()%>"
                                                      alt="">
                                             </a>
@@ -177,7 +177,7 @@
                     </a>
                     <a class="carousel-control-next" href="#featured" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">PrÃ³ximo</span>
+                        <span class="sr-only">Próximo</span>
                     </a>
                 </div>
                 <!--End slider news-->
@@ -196,7 +196,7 @@
                                     <!--thumbnail img-->
                                     <div class="ratio_right-cover-2 image-wrapper">
                                         <a href="noticia.jsp?id=<%=id4 %>" name="id">
-                                            <img class="img-fluid h-45"
+                                            <img class="img-fluid h-25"
                                                  src="<%=noticia4.getImg()%>"
                                                  alt="">
                                         </a>
@@ -228,7 +228,7 @@
                                     <!--thumbnail img-->
                                     <div class="ratio_right-cover-2 image-wrapper">
                                         <a href="noticia.jsp?id=<%=id5 %>" name="id">
-                                            <img class="img-fluid h-45"
+                                            <img class="img-fluid h-25"
                                                  src="<%=noticia5.getImg()%>"
                                                  alt="">
                                         </a>
@@ -260,7 +260,7 @@
                                     <!--thumbnail img-->
                                     <div class="ratio_right-cover-2 image-wrapper">
                                         <a href="noticia.jsp?id=<%=id6 %>" name="id">
-                                            <img class="img-fluid h-45"
+                                            <img class="img-fluid h-25"
                                                  src="<%=noticia6.getImg()%>"
                                                  alt="">
                                         </a>
@@ -292,7 +292,7 @@
                                     <!--thumbnail img-->
                                     <div class="ratio_right-cover-2 image-wrapper">
                                         <a href="noticia.jsp?id=<%=id7 %>" name="id">
-                                            <img class="img-fluid h-50 w-40"
+                                            <img class="img-fluid h-25"
                                                  src="<%=noticia7.getImg()%>"
                                                  alt=""
                                                  width="600"
