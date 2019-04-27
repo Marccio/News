@@ -41,7 +41,7 @@ public class ExcluirNews extends HttpServlet {
 		int idNoticia = Integer.parseInt(request.getParameter("idNoticia"));
 		
 		noticiaService.excluir(idNoticia);
-		
+		response.sendRedirect("/listarNoticias.jsp");
 	}
 
 }

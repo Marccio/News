@@ -72,6 +72,23 @@
 
 	<hr>
 
+	<%
+		if (usuario != null && usuario.getPerfil().toLowerCase().equals("administrador")) {
+	%>
+
+	<div style="text-align: center">
+		<button type="buton" class=" btn btn-primary " data-toggle="modal"
+			data-target="#modalExcluir" style="margin-rigth: 15px">Excluir
+			a notica</button>
+		<a href="/EditarNoticia.jsp?idNoticia=<%=noticia.getIdNoticia()%>" name="idNoticia" class="btn btn-secondary">Editar a
+			noticia</a>
+	</div>
+	<br>
+
+	<%
+		}
+	%>
+
 
 	<div>
 		<div class="container-fluid">
@@ -79,10 +96,11 @@
 				<h3 align="center">Comentarios</h3>
 				<br>
 			</div>
-			<%String email="";
-			if(usuario!=null){
-				email = usuario.getEmail();
-			}	
+			<%
+				String email = "";
+				if (usuario != null) {
+					email = usuario.getEmail();
+				}
 			%>
 			<div align="center">
 
@@ -93,46 +111,83 @@
 						String emailC = comentario.getEmail();
 						String textoC = comentario.getTexto();
 				%>
-		
-				<div ><img src="Resources/avatar.png" alt="avatar" style= "vertical-align:middle; width: 50px; height: 50px ;border-radius: 50%; text-aling:center;">  <%=emailC%></div>
+
+				<div>
+					<img src="Resources/avatar.png" alt="avatar"
+						style="vertical-align: middle; width: 50px; height: 50px; border-radius: 50%; text-aling: center;">
+					<%=emailC%></div>
 				<br>
-				<p style= "font-size:22"><%=textoC%></p>
+				<p style="font-size: 22"><%=textoC%></p>
 				<%
 					}
 				%>
-				<hr>
-				
-				<%if(usuario !=null && usuario.getPerfil().toLowerCase().equals("administrador")){ %>
-					<hr>
-						<div style="text-align:center">
-							<button type="buton" class=" btn btn-primary " style="margin-rigth:15px" onclick="">Exlcuir a notica</button>
-							<a href="/EditarNoticia.jsp" class="btn btn-secondary" data-dismiss="modal" >Editar a noticia</a>
-						</div><br>
-					<hr>	
-				<%} %>
-							
+
 				<form action="CadastroComentario.do?id=<%=id%>&email=<%=email%>"
 					method="post" name="id" name="email">
-					<div class="form-group" style="text-align:center">
-						<%	if (usuario == null) { %>
-							<hr>
-								<div ><h4 href="#">Faça o login ou cadastre-se para comentar</h4></div><br>
-							
-							<% }%>
-							
+					<div class="form-group" style="text-align: center">
+						<%
+							if (usuario == null) {
+						%>
+						<hr>
+						<div>
+							<h4 href="#">Faça o login ou cadastre-se para comentar</h4>
+						</div>
+						<br>
+
+						<%
+							}
+						%>
+
 						<%
 							if (usuario != null) {
 						%>
-						<div ><img src="Resources/avatar.png" alt="avatar" style= "vertical-align:middle; width: 50px; height: 50px ;border-radius: 50%; text-aling:center;">  <%= usuario.getEmail()%></div>
+						<div>
+							<img src="Resources/avatar.png" alt="avatar"
+								style="vertical-align: middle; width: 50px; height: 50px; border-radius: 50%; text-aling: center;">
+							<%=usuario.getEmail()%></div>
 						<input type="text" id=comentario name="texto" style="width: 500px"><br>
 						<button type="submit"
-							class=" btn btn-block mybtn btn-primary tx-tfm" name="Comenta" style="width: 500px;text-align:center; margin-top:5px;margin-left:25%;width: 50%;" >Comenta</button><br>
+							class=" btn btn-block mybtn btn-primary tx-tfm" name="Comenta"
+							style="width: 500px; text-align: center; margin-top: 5px; margin-left: 25%; width: 50%;">Comenta</button>
+						<br>
 						<%
 							}
 						%>
 					</div>
 				</form>
 
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modalExcluir">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="logo mb-3">Excluir</h1>
+					<button type="button" class="close" data-dismiss="modal">
+						<span> &times; </span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="container">
+						<div class="row">
+							<div id="first">
+								<div class="myform form ">
+									<form action="/ExcluirNews.do" method="post" name="Excluir">
+										<input type="hidden" name="idNoticia" value="<% String str = id + "";%> <%=str%>"></input>
+										<p>Você tem certeza que deseja excluir essa noticia?</p>
+										<div class="modal-footer">
+											<button type="submit" class="btn btn-secondary"
+												>Confirmar</button>
+											<button type="button" class="btn btn-primary" data-dismiss="modal">Sair</button>
+										</div>
+									</form>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

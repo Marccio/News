@@ -72,7 +72,6 @@ public class NoticiaDAO {
 		try {
 			String sql = "DELETE FROM noticia WHERE id=?";
 			PreparedStatement ps = this.conexao.prepareStatement(sql);
-
 			ps.setInt(1, id);
 			ps.execute();
 			
