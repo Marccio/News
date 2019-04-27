@@ -80,7 +80,7 @@
 		<button type="buton" class=" btn btn-primary " data-toggle="modal"
 			data-target="#modalExcluir" style="margin-rigth: 15px">Excluir
 			a notica</button>
-		<a href="/EditarNoticia.jsp?idNoticia=<%=noticia.getIdNoticia()%>" name="idNoticia" class="btn btn-secondary">Editar a
+		<a href="News/EditarNoticia.jsp?idNoticia=<%=noticia.getIdNoticia()%>" name="idNoticia" class="btn btn-secondary">Editar a
 			noticia</a>
 	</div>
 	<br>

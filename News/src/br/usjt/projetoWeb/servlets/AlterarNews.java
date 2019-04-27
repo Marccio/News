@@ -29,28 +29,28 @@ public class AlterarNews extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+NoticiaService noticiaService = new NoticiaService();
+		request.getSession();
+		
+		int idNoticia = Integer.parseInt(request.getParameter("idNoticia"));
+		Noticia noticia = noticiaService.consultar(idNoticia);
+		
+		noticia.setTitulo((String)request.getSession().getAttribute("titulo"));
+		noticia.setResumo((String)request.getSession().getAttribute("resumo"));
+		noticia.setTexto((String)request.getSession().getAttribute("texto"));
+		noticia.setEmail((String)request.getSession().getAttribute("email"));
+		noticia.setImg("Resources/Padrao.jpg");
+		
+		noticiaService.alterar(noticia);
+		
+		response.sendRedirect("/EditarNoticia.jsp?id="+idNoticia+"name="+"id");
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		NoticiaService noticiaService = new NoticiaService();
 		
-		int idNoticia = Integer.parseInt(request.getParameter("idNoticia"));
-		Noticia noticia = noticiaService.consultar(idNoticia);
-		
-		noticia.setTitulo(request.getParameter("titulo"));
-		noticia.setResumo(request.getParameter("resumo"));
-		noticia.setTexto(request.getParameter("texto"));
-		noticia.setEmail(request.getParameter("email"));
-		noticia.setImg("Resources/Padrao.jpg");
-		
-		noticiaService.alterar(noticia);
-		
-		response.sendRedirect("/EditarNoticia.jsp?id="+idNoticia+"name="+"id");
 	}
 
 }
